@@ -18,7 +18,7 @@ df.set_index("Date", inplace=True)
 df = df.set_index(pd.DatetimeIndex(pd.to_datetime(df.index)))
 
 # 重新取樣為五日資料
-days='5D'
+days='20D'
 df = df.resample(days).agg({
     'Trading_Volume': 'sum',
     'Trading_money': 'sum',

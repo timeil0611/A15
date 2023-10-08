@@ -16,7 +16,7 @@ def SMA(values, n):
 # 取得資料
 dl = DataLoader()
 df = dl.taiwan_stock_daily(
-    stock_id='0050', start_date='2000-10-03', end_date='2023-02-25')
+    stock_id='0050', start_date='2008-08-07', end_date='2023-02-25')
 # 整理資料格式
 df = df.rename(columns={"date": "Date"})
 df.set_index("Date", inplace=True)
@@ -48,17 +48,13 @@ def WMA30(data):  # Data is going to be our OHLCV
     df2['WMA30'] = talib.WMA(df2['close'], timeperiod=30)
     return df2['WMA30']
 
-def VSMA60(data):  # Data is going to be our OHLCV
-    # 取得SMA值
-    df2['SMA60'] = talib.SMA(df2['Trading_Volume'], timeperiod=60)
-    return df2['SMA60']
-
 # MA 策略
 class MAStra(Strategy):
     n1 = 60
     def init(self):
         self.sma1 = self.I(SMA, self.data.Close, self.n1)
-        self.Vsma1 = self.I(SMA, self.data.Volume, self.n1)
+        self.ma_60=self.I(SMA60, self.data)
+        
         
         # self.I(EMA30, self.data)
         # self.I(WMA30, self.data)
@@ -76,7 +72,7 @@ class MAStra(Strategy):
         # 定義一個用於存儲最高價的 Series
         self.high_prices = self.data['High']
         # 獲取過去 60 天的最高價
-        highest_high = self.high_prices[-80:].max()
+        highest_high = self.high_prices[-100:].max()
         # print("max",highest_high)
         
         # 獲取當前價格
