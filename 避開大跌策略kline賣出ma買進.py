@@ -16,7 +16,7 @@ def SMA(values, n):
 # 取得資料
 dl = DataLoader()
 df = dl.taiwan_stock_daily(
-    stock_id='0050', start_date='2008-08-07', end_date='2023-02-25')
+    stock_id='0050', start_date='2000-08-07', end_date='2023-02-25')
 # 整理資料格式
 df = df.rename(columns={"date": "Date"})
 df.set_index("Date", inplace=True)
@@ -92,9 +92,12 @@ class MAStra(Strategy):
         lowest_price = self.sma1[-400:].min()
 
         # 如果 60 日移動平均線在200值內從低點上漲 10%，則進行買入
-        if (current_price / lowest_price) >= 1.10:
+        if (current_price / lowest_price) >= 1.10 and (self.sma1[-1]/self.sma1[-20]>=1):
             self.buy()
-        
+
+        # 如果 60ma的近20個值不再下跌，買
+        # if  (self.sma1[-1]/self.sma1[-20]>=1) and not self.position: 
+        #     self.buy()
 
 
 bt = Backtest(df, MAStra, cash=10000, commission=.001798)  # 交易成本 0.1798%

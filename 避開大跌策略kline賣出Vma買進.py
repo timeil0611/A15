@@ -60,7 +60,7 @@ class MAStra(Strategy):
         self.sma1 = self.I(SMA, self.data.Close, self.n1)
         self.Vsma1 = self.I(SMA, self.data.Volume, self.n1)
         
-        self.sma1=self.I(EMA30, self.data)
+        self.ema1=self.I(EMA30, self.data)
         # self.I(WMA30, self.data)
         # 定義一個用於存儲 60 日移動平均線的 Series
         
@@ -76,7 +76,6 @@ class MAStra(Strategy):
         self.high_prices = self.data['High']
         # 獲取過去 60 天的最高價
         highest_high = self.high_prices[-80:].max()
-        # print("max",highest_high)
         
         # 獲取當前價格
         current_price =self.data['Low'][-1]
@@ -84,10 +83,6 @@ class MAStra(Strategy):
         # 如果當前價格比最高價下跌 20% 或更多，賣
         if current_price <= 0.8 * highest_high and self.position.is_long:
             self.position.close()
-            # self.sell()
-
-
-
 
 
         # 獲取過去3年的最低值(Vsma60)
@@ -100,16 +95,14 @@ class MAStra(Strategy):
         # print(self.sma1[-200:].min())
         lowest_price = self.sma1[-400:].min()
 
-        # 如果當前值比最低值大3倍，買
+        # 如果當前值比最低值大3倍、60ma的近20個值不再下跌，買
         if (current_vaule >= 3 * lowest_vaule) and (self.sma1[-1]/self.sma1[-20]>=1) and not self.position: 
             self.buy()
             
-        # 如果 60 日移動平均線在400值內從低點上漲 10%，買
-        if (current_price / lowest_price) >= 1.10 and (self.sma1[-1]/self.sma1[-20]>=1) and not self.position: 
+        # 如果 60ma的近20個值不再下跌，買
+        if  (self.sma1[-1]/self.sma1[-20]>=1) and not self.position: 
             self.buy()
-            print("[-1]",self.sma1[-1],'[-2]',self.sma1[-2],'[-1]/[-2]',self.sma1[-1]/self.sma1[-2])
-
-        
+           
 
 
 bt = Backtest(df, MAStra, cash=10000, commission=.001798)  # 交易成本 0.1798%
