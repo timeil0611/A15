@@ -7,6 +7,8 @@ import pandas as pd
 import talib
 from talib import abstract
 import matplotlib.pyplot as plt
+import numpy as np
+
 def SMA(values, n):
     """
     Return simple moving average of `values`, at
@@ -51,6 +53,8 @@ def WMA30(data):  # Data is going to be our OHLCV
 # MA 策略
 class MAStra(Strategy):
     n1 = 60
+    arr_lowest_price = np.full(60, np.nan)
+    arr_current_price = np.array([])
     def init(self):
         self.sma1 = self.I(SMA, self.data.Close, self.n1)
         self.ma_60=self.I(SMA60, self.data)
@@ -73,27 +77,31 @@ class MAStra(Strategy):
         self.high_prices = self.data['High']
         # 獲取過去 60 天的最高價
         highest_high = self.high_prices[-100:].max()
-        # print("max",highest_high)
+        # arr_highest_high = np.array([])
+        # arr_highest_high = np.append(arr_highest_high, highest_high)
+
         
         # 獲取當前價格
         current_price =self.data['Low'][-1]
-        # print("cur",current_price)
+        arr_current_price = np.append(arr_current_price, highest_high)
         # 如果當前價格比最高價下跌 20% 或更多，則賣出
         if current_price <= 0.8 * highest_high and self.position.is_long:
             self.position.close()
-            # self.sell()
-            pass
+        pass
 
 
         # print(self.sma1[-1])
         # 獲取當前價格和 60 日移動平均線
-        current_price = self.sma1[-1]
+        current_sma1 = self.sma1[-1]
         # print(self.sma1[-200:].min())
-        lowest_price = self.sma1[-400:].min()
+        self.lowest_price = self.sma1[-400:].min()
+        self.arr_lowest_price = np.append(self.arr_lowest_price, self.lowest_price)
 
         # 如果 60 日移動平均線在400值內從低點上漲 10%，則進行買入
-        if (current_price / lowest_price) >= 1.10 and not self.position:
+        if crossover((self.sma1 / self.arr_lowest_price), 1.10) and not self.position:
             self.buy()
+        # if (current_price / lowest_price) >= 1.10 and not self.position:
+        #     self.buy()
         
 
 

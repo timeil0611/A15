@@ -59,7 +59,7 @@ class MAStra(Strategy):
     def init(self):
         self.sma1 = self.I(SMA, self.data.Close, self.n1)
         self.Vsma1 = self.I(SMA, self.data.Volume, self.n1)
-        
+        print(self.Vsma1)
         # self.I(EMA30, self.data)
         # self.I(WMA30, self.data)
         # 定義一個用於存儲 60 日移動平均線的 Series
