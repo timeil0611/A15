@@ -99,8 +99,8 @@ class MAStra(Strategy):
                 self.buy()
 
         # 如果 12wk ma的近4個值不再下跌，買
-        if  (self.ema1[-1]/self.ema1[-4]>=1) and not self.position: 
-            self.buy()
+        # if  (self.ema1[-1]/self.ema1[-4]>=1) and not self.position: 
+        #     self.buy()
 
 
 bt = Backtest(df, MAStra, cash=10000, commission=.0)  # 交易成本 0.0%

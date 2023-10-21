@@ -1,1 +1,2 @@
-print("fff'\n'fds")
+import sys
+print(sys.version)

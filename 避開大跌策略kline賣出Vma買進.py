@@ -107,6 +107,11 @@ class MAStra(Strategy):
 
 bt = Backtest(df, MAStra, cash=10000, commission=.001798)  # 交易成本 0.1798%
 stats  = bt.run()
-print(stats,stats['_trades'])
+
+print(stats)
+print('Buy & Hold Return [%]   ',round(stats['Buy & Hold Return [%]'], 2))
+print('Return (Ann.) [%]       ',round(stats['Return (Ann.) [%]'], 2))
+print('Avg. Drawdown [%]       ',round(stats['Avg. Drawdown [%]'], 2))
+print('Sortino Ratio           ',round(stats['Sortino Ratio'], 2))
 
 bt.plot()
