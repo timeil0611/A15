@@ -38,7 +38,7 @@ df2 = df.rename(columns={"High": "high", "Low": "low",})
 dfT10Y2Y.set_index(pd.DatetimeIndex(dfT10Y2Y.index), inplace=True)
 dfT10Y2Y = pd.concat([df, dfT10Y2Y], axis=1, join='inner')
 dfT10Y2Y = dfT10Y2Y[['T10Y2Y']]
-
+print(dfT10Y2Y)
 # 將T10Y2Y['T10Y2Y']轉為numeric
 dfT10Y2Y['T10Y2Y'] = pd.to_numeric(dfT10Y2Y['T10Y2Y'], errors='coerce')
 
