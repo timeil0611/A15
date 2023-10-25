@@ -18,11 +18,30 @@ def SMA(values, n):
     """
     return pd.Series(values).rolling(n).mean()
 
+start='1984-01-01'
 
 # 取得資料
 df = yf.download("^GSPC", start="1984-02-17", end="2023-10-21", interval="1d")
 qqq = pd.read_csv("qqq.csv")
+tqqq_mock = pd.read_csv("tqqq_mock.csv")
 
+
+
+# 製作tqqq的candle
+tqqq_mock['Date'] = pd.to_datetime(tqqq_mock['Date'])
+tqqq_mock.set_index("Date", inplace=True)
+tqqq_mock.set_index(pd.DatetimeIndex(tqqq_mock.index), inplace=True)
+tqqq_mock=tqqq_mock[start:]
+print(tqqq_mock)
+
+
+tqqq_mock["Open"] = tqqq_mock["tqqq_mock"]
+tqqq_mock["High"] = tqqq_mock["tqqq_mock"]
+tqqq_mock["Low"] = tqqq_mock["tqqq_mock"]
+tqqq_mock["Close"] = tqqq_mock["tqqq_mock"]
+tqqq_mock["Volume"] = tqqq_mock["tqqq_mock"]
+print(tqqq_mock)
+df = tqqq_mock
 
 # 避免Open出現0值
 df["Open"] = df.apply(
@@ -41,9 +60,11 @@ df2 = df.rename(
 # #合併資料
 qqq.set_index("Date", inplace=True)
 qqq.set_index(pd.DatetimeIndex(qqq.index), inplace=True)
-qqq = pd.concat([df, qqq], axis=1, join="inner")
+qqq=qqq[start:]
+df = pd.concat([df, qqq], axis=1)
 qqq = qqq[["qqq"]]
 print(df,qqq)
+
 
 
 
@@ -91,7 +112,7 @@ class MAStra(Strategy):
         self.last_trade_date = pd.to_datetime("1950-01-01")  # 設定初值
 
     def next(self):
-        # self.buy()
+        # # self.buy()
 
         # 定義一個用於存儲最高價的 Series
         self.high_prices = self.data["High"]
@@ -102,11 +123,6 @@ class MAStra(Strategy):
         current_price = self.data["Low"][-1]
         # print("cur",current_price)
 
-        # 如果當前價格比最高價下跌 10% 或更多，賣
-        if current_price <= 0.9 * highest_high and self.position.is_long:
-            self.position.close()
-            self.last_trade_date = self.data.index[-1]
-
         # 獲取過去3年的最低值(Vsma60)
         lowest_vaule = self.Vsma1[-750:].min()
         # 獲取當前價格
@@ -116,6 +132,12 @@ class MAStra(Strategy):
         current_price = self.sma1[-1]
         # print(self.sma1[-200:].min())
         lowest_price = self.sma1[-400:].min()
+        
+        # 如果當前價格比最高價下跌 10% 或更多，賣
+        if current_price <= 0.9 * highest_high and self.position.is_long:
+            self.position.close()
+            self.last_trade_date = self.data.index[-1]
+
 
         # 如果當前交易量放大(比最低值大3倍)、60ma的近20個值不再下跌，經過冷卻，買
         if (
@@ -141,10 +163,11 @@ class MAStra(Strategy):
             self.buy()
 
 
+
 bt = Backtest(df, MAStra, cash=10000, commission=0.0)  # 交易成本 0.0%
 stats = bt.run()
 
-print(stats)
+# print(stats)
 print("Buy & Hold Return [%]   ", round(stats["Buy & Hold Return [%]"], 2))
 print("Return (Ann.) [%]       ", round(stats["Return (Ann.) [%]"], 2))
 print("Avg. Drawdown [%]       ", round(stats["Avg. Drawdown [%]"], 2))
