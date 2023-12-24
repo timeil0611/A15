@@ -35,22 +35,23 @@ df = df.dropna()
 # backtesting.py 格式
 df1 = df.rename(columns={"open": "Open", "max": "High",
                 "min": "Low", "close": "Close", "Trading_Volume": "Volume"})
-# ta-lib 格式
-df2 = df.rename(columns={"max": "high", "min": "low",
-                "Trading_Volume": "Volume"})
+# # ta-lib 格式
+# df2 = df.rename(columns={"max": "high", "min": "low",
+#                 "Trading_Volume": "Volume"})
 # 合併資料
 df = pd.merge(df1, df, on="Date")
 
 
 def df_bbnds(data):  # Data is going to be our OHLCV
-    # 取得RSI值
+    # 取得值
     df_bbnds = abstract.BBANDS(df, timeperiod=20, nbdevup=2.0, nbdevdn=2.0, matype=0)
     return df_bbnds
 
-# RSI 策略
+# 策略
 class BoolStra(Strategy):
     def init(self):
         self.df_bbnds=self.I(df_bbnds, self.data)
+        
 
     def next(self):
         if crossover(self.data.Close, self.df_bbnds[2]):  # Close>lowerband 買進 

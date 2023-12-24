@@ -1,5 +1,6 @@
 from backtesting import Backtest, Strategy
 from backtesting.lib import crossover
+from backtesting.lib import plot_heatmaps
 
 from FinMind.data import DataLoader
 import pandas as pd
@@ -10,6 +11,8 @@ import matplotlib.pyplot as plt
 
 import yfinance as yf
 
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 def SMA(values, n):
     """
@@ -20,7 +23,7 @@ def SMA(values, n):
 
 
 # 取得資料
-df = yf.download("^GSPC", start="1950-6-7", end="2023-10-01", interval="1wk")
+df = yf.download("^GSPC", start="1990-6-7", end="2023-10-01", interval="1wk")
 
 # 避免Open出現0值
 df["Open"] = df.apply(
@@ -62,63 +65,78 @@ def VSMA60(data):  # Data is going to be our OHLCV
 
 
 # MA 策略
-class MAStra(Strategy):
-    n1 = 60
-    cooldown_days = 4
-    i = 1
-
+class Sma4Cross(Strategy):
+    n1 = 50
+    n2 = 100
+    n_enter = 20
+    n_exit = 10
+    
     def init(self):
         self.sma1 = self.I(SMA, self.data.Close, self.n1)
-        self.Vsma1 = self.I(SMA, self.data.Volume, self.n1)
-        self.ema1 = self.I(EMA30, self.data)
-
-        self.cooldown_weeks = 6
-        self.last_trade_date = pd.to_datetime("1950-01-01")  # 設定初值
-
+        self.sma2 = self.I(SMA, self.data.Close, self.n2)
+        self.sma_enter = self.I(SMA, self.data.Close, self.n_enter)
+        self.sma_exit = self.I(SMA, self.data.Close, self.n_exit)
+        
     def next(self):
-        # self.buy()
-
-        # 定義一個用於存儲最高價的 Series
-        self.high_prices = self.data["High"]
-        # 獲取過去 60 天的最高價
-        highest_high = self.high_prices[-80:].max()
-
-        # 獲取當前價格
-        current_price = self.data["Low"][-1]
-        # print("cur",current_price)
-
-        # 獲取過去3年的最低值(Vsma60)
-        lowest_Vsma1 = self.Vsma1[-750:].min()
-        # 獲取當前價格
-        current_Vsma1 = self.Vsma1[-1]
-
-
-
-        # 如果當前價格比最高價下跌 10% 或更多，賣
-        if current_price <= 0.9 * highest_high and self.position.is_long:
-            self.position.close()
-            self.last_trade_date = self.data.index[-1]
-
-        # 如果當前交易量放大(比最低值大3倍)、60ma的近20個值不再下跌，經過冷卻，買
-        if (
-            (current_Vsma1 >= 3.5 * lowest_Vsma1)
-            and (self.ema1[-1] / self.ema1[-20] >= 1)
-            and not self.position
-        ):
-            self.buy()
-
-        # 如果 60ma的近20個值不再下跌，買
-        if (self.ema1[-1] / self.ema1[-20] >= 1) and not self.position:
-            self.buy()
+        
+        if not self.position:
+            
+            # On upwards trend, if price closes above
+            # "entry" MA, go long
+            
+            # Here, even though the operands are arrays, this
+            # works by implicitly comparing the two last values
+            if self.sma1 > self.sma2:
+                if crossover(self.data.Close, self.sma_enter):
+                    self.buy()
+                    
+            # On downwards trend, if price closes below
+            # "entry" MA, go short
+            
+            else:
+                if crossover(self.sma_enter, self.data.Close):
+                    self.sell()
+        
+        # But if we already hold a position and the price
+        # closes back below (above) "exit" MA, close the position
+        
+        else:
+            if (self.position.is_long and
+                crossover(self.sma_exit, self.data.Close)
+                or
+                self.position.is_short and
+                crossover(self.data.Close, self.sma_exit)):
+                
+                self.position.close()
 
 
-bt = Backtest(df, MAStra, cash=10000, commission=0.0)  # 交易成本 0.0%
-stats = bt.run()
+bt = Backtest(df, Sma4Cross, cash=10000, commission=0.0)  # 交易成本 0.0%
+stats, heatmap = bt.optimize(
+    n1=range(10, 110, 10),
+    n2=range(20, 210, 20),
+    n_enter=range(15, 35, 5),
+    n_exit=range(10, 25, 5),
+    constraint=lambda p: p.n_exit < p.n_enter < p.n1 < p.n2,
+    maximize='Equity Final [$]',
+    max_tries=200,
+    random_state=0,
+    return_heatmap=True)
 
-print(stats)
+print(heatmap,heatmap.sort_values().iloc[-3:])
+hm = heatmap.groupby(['n1', 'n2']).mean().unstack()
+print(hm)
+
+# bt.plot()
+
+sns.heatmap(hm[::-1], cmap='viridis')
+plt.show()
+
+plot_heatmaps(heatmap, agg='mean')
+
+
 print("Buy & Hold Return [%]   ", round(stats["Buy & Hold Return [%]"], 2))
 print("Return (Ann.) [%]       ", round(stats["Return (Ann.) [%]"], 2))
 print("Avg. Drawdown [%]       ", round(stats["Avg. Drawdown [%]"], 2))
 print("Sortino Ratio           ", round(stats["Sortino Ratio"], 2))
 
-bt.plot()
+

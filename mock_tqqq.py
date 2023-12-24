@@ -8,6 +8,8 @@ yfinance.pdr_override()
 # 將FSPTX與qqq在1999-03-10前融合
 FSPTX_prices = ffn.get("FSPTX", start="1999-03-10", end="1999-03-11")
 qqq_prices = ffn.get("qqq", start="1999-03-10", end="1999-03-11")
+tqqq = ffn.get("tqqq")
+
 
 # 計算倍數
 times = qqq_prices["qqq"] / FSPTX_prices["fsptx"]
@@ -25,12 +27,14 @@ qqq_hist_prices = ffn.get("qqq")
 adj_qqq_prices = qqq_hist_prices.combine_first(adj_FSPTX_hist_prices)
 
 prices = adj_qqq_prices
+prices=prices['2010-02-11':]
 
 
 prices["qqq_shift"] = prices["qqq"].shift(1)
 prices["qqq_diff"] = prices["qqq"].diff(1)
 prices["qqq_diff_tqqq"] = (2.8374 * (prices["qqq_diff"] / prices["qqq_shift"])) + 1
 prices["tqqq_mock"] = 0
+prices["tqqq"]=tqqq['tqqq']
 
 nRow = 0
 while nRow < prices.shape[0]:
@@ -45,19 +49,19 @@ while nRow < prices.shape[0]:
 print(prices)
 # prices["tqqq_mock"].to_csv("tqqq_mock.csv", index=True)
 
-
-plt.semilogy(prices.index, prices[["qqq", "tqqq_mock"]])
+prices = pd.read_csv("QQQ,mock_TQQQ.csv")
+plt.semilogy(prices["Date"], prices[["qqq", "tqqq_mock"]])
 plt.grid()
 
 
 # 價格走勢圖
-prices[["qqq", "tqqq_mock"]].rebase().plot()
+prices[["qqq",'tqqq_mock']].rebase().plot(logy=True)
 plt.grid()
 
 
 # 最大虧損
-prices[["qqq", "tqqq_mock"]].to_drawdown_series().plot()
-plt.grid()
+# prices[["qqq", "tqqq_mock"]].to_drawdown_series().plot()
+# plt.grid()
 
 plt.show()
 

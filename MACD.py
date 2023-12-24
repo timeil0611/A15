@@ -71,13 +71,14 @@ def dif_line(data):    # Data is going to be our OHLCV
 # MACD 策略
 class MACDStra(Strategy):
     def init(self):
+        print(self.data)
         self.macd=self.I(MACD, self.data)
         self.dif_line=self.I(dif_line, self.data)
 
     def next(self):
-        if crossover(self.dif_line,  self.macd):  # K<20 買進
+        if crossover(self.dif_line,  self.macd):  # dif_line<macd 買進
             self.buy()
-        elif crossover(self.macd, self.dif_line):  # K>80 平倉
+        elif crossover(self.macd, self.dif_line):  # macd>dif_line 平倉
             self.position.close()
 
 

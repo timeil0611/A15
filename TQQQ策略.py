@@ -18,35 +18,20 @@ def SMA(values, n):
     """
     return pd.Series(values).rolling(n).mean()
 
-start='1984-01-01'
+
+start = "1980-01-01"
 
 # 取得資料
 df = yf.download("^GSPC", start="1984-02-17", end="2023-10-21", interval="1d")
 qqq = pd.read_csv("qqq.csv")
-tqqq_mock = pd.read_csv("tqqq_mock.csv")
+tqqq_mock = pd.read_csv("TQQQ_Mock_kline.csv")
+df=tqqq_mock
+
+# 設定Index
+df.set_index("Date", inplace=True)
+df.set_index(pd.DatetimeIndex(df.index), inplace=True)
 
 
-
-# 製作tqqq的candle
-tqqq_mock['Date'] = pd.to_datetime(tqqq_mock['Date'])
-tqqq_mock.set_index("Date", inplace=True)
-tqqq_mock.set_index(pd.DatetimeIndex(tqqq_mock.index), inplace=True)
-tqqq_mock=tqqq_mock[start:]
-print(tqqq_mock)
-
-
-tqqq_mock["Open"] = tqqq_mock["tqqq_mock"]
-tqqq_mock["High"] = tqqq_mock["tqqq_mock"]
-tqqq_mock["Low"] = tqqq_mock["tqqq_mock"]
-tqqq_mock["Close"] = tqqq_mock["tqqq_mock"]
-tqqq_mock["Volume"] = tqqq_mock["tqqq_mock"]
-print(tqqq_mock)
-df = tqqq_mock
-
-# 避免Open出現0值
-df["Open"] = df.apply(
-    lambda row: row["Close"] if row["Open"] == 0 else row["Open"], axis=1
-)
 
 # backtesting.py
 # ta-lib 格式
@@ -60,12 +45,9 @@ df2 = df.rename(
 # #合併資料
 qqq.set_index("Date", inplace=True)
 qqq.set_index(pd.DatetimeIndex(qqq.index), inplace=True)
-qqq=qqq[start:]
+qqq = qqq[start:]
 df = pd.concat([df, qqq], axis=1)
 qqq = qqq[["qqq"]]
-print(df,qqq)
-
-
 
 
 def QQQ(data):  # Data is going to be our OHLCV
@@ -107,21 +89,20 @@ class MAStra(Strategy):
         self.Vsma1 = self.I(SMA, self.data.Volume, self.n1)
         self.ema1 = self.I(EMA30, self.data)
         self.qqq = self.I(QQQ, qqq["qqq"])
-
+        print(self.data)
         self.cooldown_weeks = 6
         self.last_trade_date = pd.to_datetime("1950-01-01")  # 設定初值
 
     def next(self):
-        # # self.buy()
-
+        # self.buy()
+        
         # 定義一個用於存儲最高價的 Series
         self.high_prices = self.data["High"]
-        # 獲取過去 60 天的最高價
+        # 獲取過去 80 天的最高價
         highest_high = self.high_prices[-80:].max()
 
         # 獲取當前價格
-        current_price = self.data["Low"][-1]
-        # print("cur",current_price)
+        # current_price = self.data["Low"][-1]
 
         # 獲取過去3年的最低值(Vsma60)
         lowest_vaule = self.Vsma1[-750:].min()
@@ -130,42 +111,44 @@ class MAStra(Strategy):
 
         # 獲取當前價格和 60 日移動平均線
         current_price = self.sma1[-1]
+        
         # print(self.sma1[-200:].min())
         lowest_price = self.sma1[-400:].min()
+
+        # # 如果當前價格比最高價下跌 10% 或更多，賣
+        # if current_price <= 0.9 * highest_high and self.position.is_long:
+        #     self.position.close()
+        #     self.last_trade_date = self.data.index[-1]
+
+        # # 如果當前交易量放大(比最低值大3倍)、60ma的近20個值不再下跌，經過冷卻，買
+        if(current_price>10):
+            self.buy()
+        # if (
+        #     (current_vaule >= 3.5 * lowest_vaule)
+        #     and
+        #       (
+        #         (self.data.index[-1] - self.last_trade_date).days / 5
+        #         > self.cooldown_weeks
+        #     )
+        #     and (self.ema1[-1] / self.ema1[-20] >= 1)
+        #     and not self.position
+        # ):
+        #     self.buy()
+
+        # # 如果 60ma的近20個值不再下跌，買
+        # if (
+        #     (self.ema1[-1] / self.ema1[-20] >= 1)
+        #     and (
+        #         (self.data.index[-1] - self.last_trade_date).days / 5
+        #         > self.cooldown_weeks
+        #     )
+        #     and not self.position
+        # ):
+        #     self.buy()
         
-        # 如果當前價格比最高價下跌 10% 或更多，賣
-        if current_price <= 0.9 * highest_high and self.position.is_long:
-            self.position.close()
-            self.last_trade_date = self.data.index[-1]
-
-
-        # 如果當前交易量放大(比最低值大3倍)、60ma的近20個值不再下跌，經過冷卻，買
-        if (
-            (current_vaule >= 3.5 * lowest_vaule)
-            and (
-                (self.data.index[-1] - self.last_trade_date).days / 5
-                > self.cooldown_weeks
-            )
-            and (self.ema1[-1] / self.ema1[-20] >= 1)
-            and not self.position
-        ):
-            self.buy()
-
-        # 如果 60ma的近20個值不再下跌，買
-        if (
-            (self.ema1[-1] / self.ema1[-20] >= 1)
-            and (
-                (self.data.index[-1] - self.last_trade_date).days / 5
-                > self.cooldown_weeks
-            )
-            and not self.position
-        ):
-            self.buy()
-
 
 
 bt = Backtest(df, MAStra, cash=10000, commission=0.0)  # 交易成本 0.0%
-
 stats = bt.run()
 
 # print(stats)
@@ -173,5 +156,7 @@ print("Buy & Hold Return [%]   ", round(stats["Buy & Hold Return [%]"], 2))
 print("Return (Ann.) [%]       ", round(stats["Return (Ann.) [%]"], 2))
 print("Avg. Drawdown [%]       ", round(stats["Avg. Drawdown [%]"], 2))
 print("Sortino Ratio           ", round(stats["Sortino Ratio"], 2))
+print("Win Rate [%]            ", round(stats["Win Rate [%]"], 2))
 
-bt.plot()
+
+bt.plot(resample='1W')

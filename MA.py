@@ -66,7 +66,7 @@ class MAStra(Strategy):
         
         # self.ma_60 = df2['close'].rolling(window=60).mean()
 
-        print(len(self.sma1))
+        
         # print(self.ma_60)
 
     def next(self):
