@@ -1,0 +1,716 @@
+,Fred_Popular_Series
+0,10-Year Treasury Constant Maturity Minus 2-Year Treasury Constant Maturity
+1,30-Year Fixed Rate Mortgage Average in the United States
+2,Federal Funds Effective Rate
+3,M2
+4,Overnight Reverse Repurchase Agreements: Treasury Securities Sold by the Federal Reserve in the Temporary Open Market Operations
+5,Assets: Total Assets: Total Assets (Less Eliminations from Consolidation): Wednesday Level
+6,10-Year Treasury Constant Maturity Minus 3-Month Treasury Constant Maturity
+7,Unemployment Rate
+8,Consumer Price Index for All Urban Consumers: All Items in U.S. City Average
+9,ICE BofA US High Yield Index Option-Adjusted Spread
+10,"Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis"
+11,Gross Domestic Product
+12,Real Gross Domestic Product
+13,S&P/Case-Shiller U.S. National Home Price Index
+14,Median Sales Price of Houses Sold for the United States
+15,10-Year Breakeven Inflation Rate
+16,"Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis, Inflation-Indexed"
+17,M1
+18,Personal Saving Rate
+19,Sticky Price Consumer Price Index less Food and Energy
+20,"Inflation, consumer prices for the United States"
+21,Average Sales Price of Houses Sold for the United States
+22,Federal Debt: Total Public Debt as Percent of Gross Domestic Product
+23,"Delinquency Rate on Credit Card Loans, All Commercial Banks"
+24,5-Year Breakeven Inflation Rate
+25,S&P 500
+26,Federal Debt: Total Public Debt
+27,ICE BofA US High Yield Index Effective Yield
+28,Real-time Sahm Rule Recession Indicator
+29,Personal Consumption Expenditures
+30,Moody's Seasoned Aaa Corporate Bond Yield
+31,Velocity of M2 Money Stock
+32,Real Median Household Income in the United States
+33,Secured Overnight Financing Rate
+34,Labor Force Participation Rate
+35,"All Employees, Total Nonfarm"
+36,Initial Claims
+37,Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average
+38,"Market Yield on U.S. Treasury Securities at 1-Year Constant Maturity, Quoted on an Investment Basis"
+39,Consumer Price Index: All Items: Total for United States
+40,Consumer Price Index: All Items: Total for United States
+41,"5-Year, 5-Year Forward Inflation Expectation Rate"
+42,"3-Month Treasury Bill Secondary Market Rate, Discount Basis"
+43,10-Year Real Interest Rate
+44,"Market Yield on U.S. Treasury Securities at 2-Year Constant Maturity, Quoted on an Investment Basis"
+45,"Liabilities and Capital: Liabilities: Deposits with F.R. Banks, Other Than Reserve Balances: U.S. Treasury, General Account: Week Average"
+46,Consumer Price Index for All Urban Consumers: Used Cars and Trucks in U.S. City Average
+47,University of Michigan: Consumer Sentiment
+48,Employed full time: Median usual weekly real earnings: Wage and salary workers: 16 years and over
+49,"Consumer Loans: Credit Cards and Other Revolving Plans, All Commercial Banks"
+50,Federal Surplus or Deficit [-]
+51,Federal Funds Target Range - Upper Limit
+52,Chicago Fed National Financial Conditions Index
+53,ICE BofA BBB US Corporate Index Option-Adjusted Spread
+54,Personal Consumption Expenditures: Chain-type Price Index
+55,New Privately-Owned Housing Units Started: Total Units
+56,"Market Yield on U.S. Treasury Securities at 5-Year Constant Maturity, Quoted on an Investment Basis"
+57,Industrial Production: Total Index
+58,Industrial Production: Total Index
+59,"Deposits, All Commercial Banks"
+60,Job Openings: Total Nonfarm
+61,"Crude Oil Prices: West Texas Intermediate (WTI) - Cushing, Oklahoma"
+62,Housing Inventory: Active Listing Count in the United States
+63,"Average Hourly Earnings of All Employees, Total Private"
+64,Moody's Seasoned Baa Corporate Bond Yield
+65,ICE BofA US Corporate Index Option-Adjusted Spread
+66,Personal Consumption Expenditures Excluding Food and Energy (Chain-Type Price Index)
+67,Federal government current expenditures: Interest payments
+68,Monetary Base; Total
+69,Real M2 Money Stock
+70,"Market Yield on U.S. Treasury Securities at 30-Year Constant Maturity, Quoted on an Investment Basis"
+71,ICE BofA BBB US Corporate Index Effective Yield
+72,Producer Price Index by Commodity: All Commodities
+73,Total Vehicle Sales
+74,Monthly Supply of New Houses in the United States
+75,"Market Yield on U.S. Treasury Securities at 20-Year Constant Maturity, Quoted on an Investment Basis"
+76,Liabilities and Capital: Other Factors Draining Reserve Balances: Reserve Balances with Federal Reserve Banks: Week Average
+77,Effective Federal Funds Rate
+78,"FOMC Summary of Economic Projections for the Fed Funds Rate, Median"
+79,Household Debt Service Payments as a Percent of Disposable Personal Income
+80,Nominal Broad U.S. Dollar Index
+81,"Assets: Liquidity and Credit Facilities: Loans: Bank Term Funding Program, Net: Wednesday Level"
+82,"Delinquency Rate on Single-Family Residential Mortgages, Booked in Domestic Offices, All Commercial Banks"
+83,Existing Home Sales
+84,Continued Claims (Insured Unemployment)
+85,Real Disposable Personal Income
+86,"Money Market Funds; Total Financial Assets, Level"
+87,Real gross domestic product per capita
+88,15-Year Fixed Rate Mortgage Average in the United States
+89,Real Personal Consumption Expenditures
+90,CBOE Volatility Index: VIX
+91,Smoothed U.S. Recession Probabilities
+92,Moody's Seasoned Baa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity
+93,Interest Rate on Reserve Balances
+94,Consumer Price Index for All Urban Consumers: Rent of Primary Residence in U.S. City Average
+95,Real Median Personal Income in the United States
+96,"Average Price: Eggs, Grade A, Large (Cost per Dozen) in U.S. City Average"
+97,All-Transactions House Price Index for the United States
+98,Housing Affordability Index (Fixed)
+99,Bank Prime Loan Rate Changes: Historical Dates of Changes and Rates
+100,Federal Surplus or Deficit [-] as Percent of Gross Domestic Product
+101,"Producer Price Index by Commodity: Pulp, Paper, and Allied Products: Wood Pulp"
+102,30-Day Average SOFR
+103,10-Year Treasury Constant Maturity Minus Federal Funds Rate
+104,Net Percentage of Domestic Banks Tightening Standards for Commercial and Industrial Loans to Large and Middle-Market Firms
+105,Currency in Circulation
+106,"Market Yield on U.S. Treasury Securities at 3-Month Constant Maturity, Quoted on an Investment Basis"
+107,St. Louis Fed Financial Stress Index
+108,Bank Prime Loan Rate
+109,Reserves of Depository Institutions: Total
+110,Producer Price Index by Industry: Plastics Material and Resin Manufacturing
+111,U.S. Dollars to Euro Spot Exchange Rate
+112,Personal Saving
+113,Overnight Reverse Repurchase Agreements Award Rate: Treasury Securities Sold by the Federal Reserve in the Temporary Open Market Operations
+114,"Market Yield on U.S. Treasury Securities at 1-Month Constant Maturity, Quoted on an Investment Basis"
+115,"Loans and Leases in Bank Credit, All Commercial Banks"
+116,Dow Jones Industrial Average
+117,Gross Domestic Product: Implicit Price Deflator
+118,ICE BofA CCC & Lower US High Yield Index Effective Yield
+119,"Commercial and Industrial Loans, All Commercial Banks"
+120,Monetary Aggregates and Their Components: Broad Money and Components: M3 for United States
+121,Monetary Aggregates and Their Components: Broad Money and Components: M3 for United States
+122,ICE BofA CCC & Lower US High Yield Index Option-Adjusted Spread
+123,ICE BofA BB US High Yield Index Option-Adjusted Spread
+124,Median Consumer Price Index
+125,"Bank Credit, All Commercial Banks"
+126,Homeownership Rate in the United States
+127,Crude Oil Prices: Brent - Europe
+128,"Delinquency Rate on Consumer Loans, All Commercial Banks"
+129,Assets: Securities Held Outright: U.S. Treasury Securities: All: Wednesday Level
+130,New Privately-Owned Housing Units Authorized in Permit-Issuing Places: Total Units
+131,GDPNow
+132,Nonfarm Business Sector: Labor Productivity (Output per Hour) for All Workers
+133,Consumer Price Index for All Urban Consumers: New Vehicles in U.S. City Average
+134,New One Family Houses Sold: United States
+135,Median Household Income in the United States
+136,NBER based Recession Indicators for the United States from the Period following the Peak through the Trough
+137,Advance Retail Sales: Retail Trade
+138,All-Transactions House Price Index for California
+139,Producer Price Index by Industry: Total Manufacturing Industries
+140,Corporate Profits After Tax (without IVA and CCAdj)
+141,US Regular All Formulations Gas Price
+142,"Interest Rates, Discount Rate for United States"
+143,Liabilities and Capital: Liabilities: Earnings Remittances Due to the U.S. Treasury: Wednesday Level
+144,Consumer Price Index for All Urban Consumers: Purchasing Power of the Consumer Dollar in U.S. City Average
+145,Real Residential Property Prices for Canada
+146,Household Debt to GDP for United States
+147,Assets: Securities Held Outright: Mortgage-Backed Securities: Wednesday Level
+148,Producer Price Index by Commodity: Metals and Metal Products: Cold Rolled Steel Sheet and Strip
+149,"Market Yield on U.S. Treasury Securities at 5-Year Constant Maturity, Quoted on an Investment Basis, Inflation-Indexed"
+150,"Delinquency Rate on All Loans, All Commercial Banks"
+151,"All Employees, Manufacturing"
+152,"Market Yield on U.S. Treasury Securities at 3-Year Constant Maturity, Quoted on an Investment Basis"
+153,Dates of U.S. recessions as inferred by GDP-based recession indicator
+154,Personal Consumption Expenditures (PCE) Excluding Food and Energy (Chain-Type Price Index)
+155,Consumer Price Index for All Urban Consumers: Food in U.S. City Average
+156,University of Michigan: Inflation Expectation
+157,Residential Property Prices for Japan
+158,"Households; Net Worth, Level"
+159,NASDAQ Composite Index
+160,ICE BofA BB US High Yield Index Effective Yield
+161,Existing Home Sales: Housing Inventory
+162,Unemployment Rate - Black or African American
+163,Daily Sterling Overnight Index Average (SONIA) Rate
+164,Japanese Yen to U.S. Dollar Spot Exchange Rate
+165,Interest Rates: Long-Term Government Bond Yields: 10-Year: Main (Including Benchmark) for United States
+166,Real Potential Gross Domestic Product
+167,Manufacturers' New Orders: Durable Goods
+168,Commercial Real Estate Prices for United States
+169,Term Premium on a 10 Year Zero Coupon Bond
+170,Weekly Economic Index (Lewis-Mertens-Stock)
+171,"Commercial Bank Interest Rate on Credit Card Plans, All Accounts"
+172,Consumer Price Index for All Urban Consumers: Shelter in U.S. City Average
+173,Labor Force Participation Rate - 25-54 Yrs.
+174,Real Residential Property Prices for China
+175,Sahm Rule Recession Indicator
+176,Disposable Personal Income
+177,Velocity of M1 Money Stock
+178,Federal government current tax receipts
+179,Employment Cost Index: Wages and Salaries: Private Industry Workers
+180,Gross Domestic Income
+181,Federal Government: Current Expenditures
+182,S&P/Case-Shiller 20-City Composite Home Price Index
+183,Chinese Yuan Renminbi to U.S. Dollar Spot Exchange Rate
+184,Unemployment Level
+185,ICE BofA AAA US Corporate Index Effective Yield
+186,Median Sales Price for New Houses Sold in the United States
+187,Assets: Total Assets: Total Assets: Wednesday Level
+188,Total Construction Spending: Total Construction in the United States
+189,Gross Federal Debt as Percent of Gross Domestic Product
+190,Leading Indicators OECD: Leading Indicators: Composite Leading Indicator: Normalised for United States
+191,30-Year Fixed Rate Jumbo Mortgage Index
+192,Rental Vacancy Rate in the United States
+193,Retail Money Market Funds
+194,ICE BofA Euro High Yield Index Option-Adjusted Spread
+195,Real Disposable Personal Income: Per Capita
+196,"Delinquency Rate on Commercial Real Estate Loans (Excluding Farmland), Booked in Domestic Offices, All Commercial Banks"
+197,National Deposit Rates: Savings
+198,TED Spread (DISCONTINUED)
+199,"All Employees, Construction"
+200,Share of Total Net Worth Held by the Top 1% (99th to 100th Wealth Percentiles)
+201,Consumer Price Index for All Urban Consumers: Food at Home in U.S. City Average
+202,Capacity Utilization: Total Index
+203,1-Year Real Interest Rate
+204,ICE BofA Euro High Yield Index Effective Yield
+205,Liabilities and Capital: Other Factors Draining Reserve Balances: Reserve Balances with Federal Reserve Banks: Wednesday Level
+206,ICE BofA Single-B US High Yield Index Effective Yield
+207,All-Transactions House Price Index for Florida
+208,Real gross domestic income
+209,Moody's Seasoned Aaa Corporate Bond Yield Relative to Yield on 10-Year Treasury Constant Maturity
+210,"Average Price: Ground Beef, 100% Beef (Cost per Pound/453.6 Grams) in U.S. City Average"
+211,Motor Vehicle Retail Sales: Heavy Weight Trucks
+212,Real Residential Property Prices for United States
+213,Leading Index for the United States
+214,"Global price of LNG, Asia"
+215,4-Week Moving Average of Initial Claims
+216,Global price of Olive Oil
+217,Population
+218,Employment-Population Ratio
+219,10-Year Expected Inflation
+220,"Real Estate Loans: Commercial Real Estate Loans, All Commercial Banks"
+221,"Real Estate Loans: Commercial Real Estate Loans, All Commercial Banks"
+222,Domestic Auto Inventories
+223,Light Weight Vehicle Sales: Autos and Light Trucks
+224,Spot Crude Oil Price: West Texas Intermediate (WTI)
+225,"Producer Price Index by Commodity: Metals and Metal Products: Steel Wire, Stainless Steel"
+226,"Liabilities and Capital: Liabilities: Deposits with F.R. Banks, Other Than Reserve Balances: U.S. Treasury, General Account: Wednesday Level"
+227,Producer Price Index by Commodity: Chemicals and Allied Products: Industrial Chemicals
+228,Median Sales Price of Existing Homes
+229,Central Bank Assets for Euro Area (11-19 Countries)
+230,"All Employees, Truck Transportation"
+231,Consumer Price Index for All Urban Consumers: Energy in U.S. City Average
+232,"Average Price: Chicken Breast, Boneless (Cost per Pound/453.6 Grams) in U.S. City Average"
+233,Civilian Labor Force Level
+234,"All Employees, Government"
+235,Henry Hub Natural Gas Spot Price
+236,"Average Hourly Earnings of Production and Nonsupervisory Employees, Total Private"
+237,ICE BofA US Corporate Index Effective Yield
+238,Average Price: Electricity per Kilowatt-Hour in U.S. City Average
+239,S&P/Case-Shiller CA-San Francisco Home Price Index
+240,New Privately-Owned Housing Units Started: Single-Family Units
+241,Federal Outlays: Interest as Percent of Gross Domestic Product
+242,Employment Level
+243,Global price of Energy index
+244,"All Employees, Temporary Help Services"
+245,Liabilities and Capital: Liabilities: Reverse Repurchase Agreements: Wednesday Level
+246,10-Year High Quality Market (HQM) Corporate Bond Spot Rate
+247,Manufacturers' New Orders: Nondefense Capital Goods Excluding Aircraft
+248,1-Year Expected Inflation
+249,90-Day Average SOFR
+250,Producer Price Index by Industry: Cement and Concrete Product Manufacturing
+251,Personal Income
+252,Manufacturers' New Orders: Total Manufacturing
+253,M2 for United States
+254,Coinbase Bitcoin
+255,"Total Unemployed, Plus All Persons Marginally Attached to the Labor Force, Plus Total Employed Part Time for Economic Reasons, as a Percent of the Civilian Labor Force Plus All Persons Marginally Attached to the Labor Force (U-6)"
+256,Housing Inventory Estimate: Total Housing Units in the United States
+257,"Market Yield on U.S. Treasury Securities at 6-Month Constant Maturity, Quoted on an Investment Basis"
+258,"Average Weekly Hours of All Employees, Total Private"
+259,"All Employees, Total Private"
+260,Mortgage Debt Service Payments as a Percent of Disposable Personal Income
+261,Producer Price Index by Commodity: Final Demand: Finished Goods Less Foods and Energy
+262,Global price of Copper
+263,Federal Net Outlays as Percent of Gross Domestic Product
+264,Quits: Total Nonfarm
+265,Nonperforming Total Loans (past due 90+ days plus nonaccrual) to Total Loans (DISCONTINUED)
+266,Overnight Repurchase Agreements: Treasury Securities Purchased by the Federal Reserve in the Temporary Open Market Operations
+267,Producer Price Index by Industry: Chemical Manufacturing
+268,Producer Price Index by Commodity: Metals and Metal Products
+269,"Average Price: Bread, White, Pan (Cost per Pound/453.6 Grams) in U.S. City Average"
+270,Producer Price Index by Commodity: Final Demand
+271,Global Price Index of All Commodities
+272,Housing Inventory: Active Listing Count in Florida
+273,"Global price of Natural gas, EU"
+274,Noncyclical Rate of Unemployment
+275,30-Year Fixed Rate Veterans Affairs Mortgage Index
+276,Trimmed Mean PCE Inflation Rate
+277,Trimmed Mean PCE Inflation Rate
+278,M2 (DISCONTINUED)
+279,Software Development Job Postings on Indeed in the United States
+280,"Producer Price Index by Industry: General Freight Trucking, Long-Distance Truckload: General Freight Trucking, Long-Distance, Truckload"
+281,"Total Assets, All Commercial Banks"
+282,Consumer Price Index for All Urban Consumers: Food Away from Home in U.S. City Average
+283,Labor Force Participation Rate - Women
+284,ICE BofA Single-A US Corporate Index Option-Adjusted Spread
+285,Producer Price Index by Commodity: Special Indexes: Construction Materials
+286,"4-Week Treasury Bill Secondary Market Rate, Discount Basis"
+287,"Delinquency Rate on Business Loans, All Commercial Banks"
+288,ICE BofA US High Yield Index Total Return Index Value
+289,Consumer Price Index for All Urban Consumers: Gasoline (All Types) in U.S. City Average
+290,Existing Home Sales: Months Supply
+291,Housing Inventory: Median Days on Market in the United States
+292,Consumer Price Index for All Urban Consumers: Services Less Energy Services in U.S. City Average
+293,Total Consumer Credit Owned and Securitized
+294,All-Transactions House Price Index for New York
+295,S&P/Case-Shiller CA-Los Angeles Home Price Index
+296,Retailers: Inventories to Sales Ratio
+297,Federal Debt Held by Federal Reserve Banks
+298,Liabilities and Capital: Liabilities: Deposits: U.S. Treasury General Account: Wednesday Level in Federal Reserve District 2: New York
+299,Gross Private Domestic Investment
+300,Consumer Price Index for All Urban Consumers: Apparel in U.S. City Average
+301,Global price of Uranium
+302,Global price of Uranium
+303,Real Gross Domestic Product for Japan
+304,ICE BofA AA US Corporate Index Effective Yield
+305,"Households; Checkable Deposits and Currency; Asset, Level"
+306,GINI Index for the United States
+307,Federal Receipts as Percent of Gross Domestic Product
+308,"Market Yield on U.S. Treasury Securities at 7-Year Constant Maturity, Quoted on an Investment Basis"
+309,Producer Price Index by Industry: Electric Power and Specialty Transformer Manufacturing
+310,SOFR Index
+311,Producer Price Index by Industry: Truck Transportation
+312,State Minimum Wage Rate for Ohio
+313,ICE BofA Single-B US High Yield Index Option-Adjusted Spread
+314,Assets: Central Bank Liquidity Swaps: Central Bank Liquidity Swaps: Wednesday Level
+315,Real Residential Property Prices for Australia
+316,Consumer Price Index for All Urban Consumers: Electricity in U.S. City Average
+317,South Korean Won to U.S. Dollar Spot Exchange Rate
+318,Working Age Population: Aged 15-64: All Persons for United States
+319,Producer Price Index by Industry: Paint and Coating Manufacturing
+320,Federal Funds Target Range - Lower Limit
+321,St. Louis Fed Economic News Index: Real GDP Nowcast
+322,Consumer Debt Service Payments as a Percent of Disposable Personal Income
+323,Global price of Brent Crude
+324,U.S. Dollars to U.K. Pound Sterling Spot Exchange Rate
+325,E-Commerce Retail Sales as a Percent of Total Sales
+326,Nominal Gross Domestic Product for United States
+327,Nominal Gross Domestic Product for United States
+328,Producer Price Index by Commodity: Metals and Metal Products: Steel Mill Products
+329,Stock Market Capitalization to GDP for United States
+330,New Privately-Owned Housing Units Under Construction: Total Units
+331,GDP-Based Recession Indicator Index
+332,Unemployment Rate in California
+333,Producer Price Index by Industry: Oil and Gas Field Machinery and Equipment Manufacturing
+334,Producer Price Index by Commodity: Industrial Commodities
+335,Consumer Price Index for All Urban Consumers: Medical Care Services in U.S. City Average
+336,Total Construction Spending: Manufacturing in the United States
+337,Advance Real Retail and Food Services Sales
+338,Real Gross Domestic Product for Germany
+339,Total Business: Inventories to Sales Ratio
+340,Sticky Price Consumer Price Index
+341,S&P/Case-Shiller WA-Seattle Home Price Index
+342,Job Postings on Indeed in the United States
+343,"Producer Price Index by Commodity: Pulp, Paper, and Allied Products: Corrugated Paperboard in Sheets and Rolls, Lined and Unlined"
+344,Discount Window Primary Credit Rate
+345,Consumer Price Index: All Items: Total for China
+346,Consumer Price Index: All Items: Total for China
+347,Gross Domestic Product for China
+348,ICE BofA AA US Corporate Index Option-Adjusted Spread
+349,"Trade Balance: Goods and Services, Balance of Payments Basis"
+350,Producer Price Index by Commodity: Final Demand: Final Demand Construction
+351,Producer Price Index by Industry: Pharmaceutical Preparation Manufacturing
+352,Economic Policy Uncertainty Index for United States
+353,Chicago Fed Adjusted National Financial Conditions Index
+354,"Finance Rate on Consumer Installment Loans at Commercial Banks, New Autos 48 Month Loan"
+355,Producer Price Index by Industry: Deep Sea Freight Transportation
+356,Global price of Aluminum
+357,ICE BofA Single-A US Corporate Index Effective Yield
+358,"1-Year Treasury Bill Secondary Market Rate, Discount Basis"
+359,Balance Sheet: Total Assets
+360,Producer Price Index by Commodity: Metals and Metal Products: Carbon Steel Scrap
+361,Producer Price Index by Industry: Food Manufacturing
+362,"Population - With a Disability, 16 Years and over"
+363,Producer Price Index by Industry: Transportation and Warehousing Industries
+364,Personal income per capita
+365,"Delinquency Rate on Credit Card Loans, Banks Not Among the 100 Largest in Size by Assets"
+366,5/1-Year Adjustable Rate Mortgage Average in the United States (DISCONTINUED)
+367,"Market Yield on U.S. Treasury Securities at 30-Year Constant Maturity, Quoted on an Investment Basis, Inflation-Indexed"
+368,Employment-Population Ratio - 25-54 Yrs.
+369,"All Employees, Leisure and Hospitality"
+370,Producer Price Index by Commodity: Lumber and Wood Products: Plywood
+371,Real M1 Money Stock
+372,Producer Price Index by Commodity: Metals and Metal Products: Iron and Steel
+373,"All Employees, Oil and Gas Extraction"
+374,Producer Price Index by Commodity: Fuels and Related Products and Power: No. 2 Diesel Fuel
+375,30-Year Fixed Rate FHA Mortgage Index
+376,Federal Debt Held by Foreign and International Investors
+377,"Nonfinancial Corporate Business; Debt Securities and Loans; Liability, Level"
+378,"Nonfinancial Corporate Business; Debt Securities and Loans; Liability, Level"
+379,Wilshire 5000 Price Index
+380,"6-Month Treasury Bill Secondary Market Rate, Discount Basis"
+381,"All Employees, Retail Trade"
+382,Canadian Dollars to U.S. Dollar Spot Exchange Rate
+383,Producer Price Index by Industry: Semiconductor and Other Electronic Component Manufacturing
+384,Producer Price Index by Commodity: Lumber and Wood Products
+385,"Average Price: Milk, Fresh, Whole, Fortified (Cost per Gallon/3.8 Liters) in U.S. City Average"
+386,Coincident Economic Activity Index for the United States
+387,Manufacturers' New Orders: Motor Vehicles and Parts
+388,"All Employees, Transportation and Warehousing"
+389,Real Residential Property Prices for Germany
+390,"All Employees, Professional and Business Services"
+391,Producer Price Index by Industry: Construction Machinery Manufacturing
+392,Producer Price Index by Industry: Other Aircraft Parts and Equipment Manufacturing
+393,Industrial Production: Manufacturing (NAICS)
+394,Producer Price Index by Commodity: Farm Products: Grains
+395,Real Gross Private Domestic Investment
+396,"Producer Price Index by Industry: Aluminum Sheet, Plate, and Foil Manufacturing"
+397,Layoffs and Discharges: Total Nonfarm
+398,Producer Price Index by Commodity: Final Demand: Final Demand Less Foods and Energy
+399,Producer Price Index by Commodity: Final Demand: Final Demand Less Foods and Energy
+400,"All Employees, Information"
+401,Producer Price Index by Industry: Switchgear and Switchboard Apparatus Manufacturing
+402,Producer Price Index by Industry: Turbine and Turbine Generator Set Units Manufacturing
+403,Producer Price Index by Industry: Industrial Valve Manufacturing
+404,Overnight Bank Funding Rate
+405,Personal Consumption Expenditures: Durable Goods
+406,"All Employees, Private Education and Health Services"
+407,State Minimum Wage Rate for Massachusetts
+408,Gross National Product
+409,Producer Price Index by Commodity: Lumber and Wood Products: Lumber
+410,Producer Price Index by Industry: Total Retail Trade Industries
+411,Vehicle Miles Traveled
+412,Producer Price Index by Industry: Total Wholesale Trade Industries
+413,"Consumer Loans, All Commercial Banks"
+414,"Households; Owners' Equity in Real Estate, Level"
+415,Median Personal Income in the United States
+416,Producer Price Index by Industry: Building Material and Supplies Dealers
+417,"Producer Price Index by Industry: General Freight Trucking, Long-Distance Truckload"
+418,Producer Price Index by Industry: Synthetic Rubber Manufacturing: Primary Products
+419,"All Employees, Financial Activities"
+420,Producer Price Index by Industry: Industrial Gas Manufacturing
+421,Advance Retail Sales: Retail Trade and Food Services
+422,Student Loans Owned and Securitized
+423,Large Bank Consumer Credit Card Balances: Total Balances
+424,Producer Price Index by Industry: Petroleum Lubricating Oil and Grease Manufacturing
+425,Revolving Consumer Credit Owned and Securitized
+426,"All Employees, Air Transportation"
+427,Producer Price Index by Commodity: Final Demand: Final Demand Energy
+428,Producer Price Index by Industry: Iron and Steel Mills and Ferroalloy Manufacturing
+429,Liabilities and Capital: Liabilities: Deposits: Other Deposits Held by Depository Institutions: Wednesday Level
+430,Producer Price Index by Industry: Electric Power Distribution
+431,S&P/Case-Shiller CA-San Diego Home Price Index
+432,Assets: Other: Repurchase Agreements: Wednesday Level
+433,30-year Breakeven Inflation Rate
+434,Overnight Reverse Repurchase Agreements: Total Securities Sold by the Federal Reserve in the Temporary Open Market Operations
+435,Producer Price Index by Commodity: Intermediate Demand by Commodity Type: Processed Goods for Intermediate Demand
+436,New Privately-Owned Housing Units Completed: Total Units
+437,Consumer Price Index for All Urban Consumers: Medical Care Commodities in U.S. City Average
+438,Producer Price Index by Industry: Aircraft Engine and Engine Parts Manufacturing
+439,State Minimum Wage Rate for Texas
+440,Global price of Wheat
+441,Producer Price Index by Commodity: Final Demand: Finished Consumer Foods
+442,Producer Price Index by Commodity: Real Estate Services (Partial)
+443,Total Nonfarm Private Payroll Employment
+444,Producer Price Index by Industry: Air Transportation
+445,"All Employees, Mining and Logging"
+446,Federal Funds Target Rate (DISCONTINUED)
+447,Consumer Price Index: All Items: Total for United Kingdom
+448,Consumer Price Index: All Items: Total for United Kingdom
+449,Wilshire 5000 Total Market Index
+450,Producer Price Index by Commodity: Processed Foods and Feeds: Meats
+451,"Average Weekly Hours of Production and Nonsupervisory Employees, Manufacturing"
+452,"Producer Price Index by Industry: Automobile, Light Truck and Utility Vehicle Manufacturing"
+453,"All Employees, Wholesale Trade"
+454,Total Construction Spending: Nonresidential in the United States
+455,Consumer Price Index for All Urban Consumers: Education and Communication in U.S. City Average
+456,"Producer Price Index by Commodity: Retail Trade Services: Apparel, Jewelry, Footwear, and Accessories Retailing"
+457,Producer Price Index by Commodity: Fuels and Related Products and Power: Crude Petroleum (Domestic Production)
+458,Producer Price Index by Industry: New Car Dealers
+459,Producer Price Index by Commodity: Fuels and Related Products and Power: Gasoline
+460,"Producer Price Index by Commodity: Final Demand: Final Demand Less Foods, Energy, and Trade Services"
+461,Producer Price Index by Commodity: Final Demand: Final Demand Goods
+462,"Producer Price Index by Commodity: Final Demand: Final Demand Less Foods, Energy, and Trade Services"
+463,Producer Price Index by Industry: All Other Basic Organic Chemical Manufacturing: Primary Products
+464,ICE BofA Emerging Markets Corporate Plus Index Option-Adjusted Spread
+465,"All Employees, Other Services"
+466,"Interest Rates and Price Indexes; Commercial Real Estate Price Index, Level"
+467,Producer Price Index by Industry: General Medical and Surgical Hospitals
+468,Producer Price Index by Commodity: Retail Trade Services: Food and Alcohol Retailing
+469,Primary Credit Rate - Historical Dates of Changes and Rates for Federal Reserve District 8: St. Louis
+470,Auto Inventory/Sales Ratio
+471,Producer Price Index by Industry: Hardware Manufacturing
+472,Producer Price Index by Industry: Hardware Manufacturing
+473,Total Factor Productivity at Constant National Prices for United States
+474,Gross Domestic Product for Japan
+475,"FOMC Summary of Economic Projections for the Growth Rate of Real Gross Domestic Product, Central Tendency, Midpoint"
+476,Housing Inventory: Active Listing Count in California
+477,90-Day AA Financial Commercial Paper Interest Rate
+478,Producer Price Index by Commodity: Transportation Equipment: Motor Vehicles
+479,Producer Price Index by Commodity: Chemicals and Allied Products: Pharmaceutical Preparations
+480,"Zillow Home Value Index (ZHVI) for All Homes Including Single-Family Residences, Condos, and CO-OPs in the United States of America"
+481,ICE BofA AAA US Corporate Index Option-Adjusted Spread
+482,Producer Price Index by Industry: Line-Haul Railroads
+483,"All-Transactions House Price Index for Austin-Round Rock-Georgetown, TX (MSA)"
+484,S&P/Case-Shiller IL-Chicago Home Price Index
+485,Producer Price Index by Commodity: Final Demand: Final Demand Services
+486,Total Business Inventories
+487,ECB Deposit Facility Rate for Euro Area
+488,Producer Price Index by Industry: Ball and Roller Bearing Manufacturing
+489,State Minimum Wage Rate for New Jersey
+490,Producer Price Index by Industry: Supermarkets and Other Grocery Stores
+491,Producer Price Index by Commodity: Wholesale Trade Services: Machinery and Equipment and Parts and Supplies Wholesaling
+492,Bank of Japan: Total Assets for Japan
+493,Producer Price Index by Industry: Other Heavy Machinery Rental and Leasing
+494,Producer Price Index by Industry: Other Fabricated Wire Product Manufacturing
+495,3-month London Interbank Offered Rate (LIBOR)
+496,Producer Price Index by Commodity: Final Demand: Final Demand Foods
+497,Producer Price Index by Commodity: Intermediate Demand by Commodity Type: Unprocessed Goods for Intermediate Demand
+498,Producer Price Index by Commodity: Final Demand: Final Demand Transportation and Warehousing Services
+499,S&P/Case-Shiller NY-New York Home Price Index
+500,Producer Price Index by Industry: Fruit and Vegetable Canning
+501,Producer Price Index by Commodity: Processed Foods and Feeds: Prepared Animal Feeds
+502,Producer Price Index by Industry: Current-Carrying Wiring Device Manufacturing
+503,Producer Price Index by Industry: Sheet Metal Work Manufacturing
+504,Venezuelan Bolivares to U.S. Dollar Spot Exchange Rate
+505,2-Year Expected Inflation
+506,Producer Price Index by Industry: Scheduled Passenger Air Transportation
+507,"Nikkei Stock Average, Nikkei 225"
+508,NASDAQ 100 Index
+509,Producer Price Index by Commodity: Intermediate Demand by Commodity Type: Services for Intermediate Demand
+510,Producer Price Index by Commodity: Health Care Services: Outpatient Care (Partial)
+511,Producer Price Index by Commodity: Health Care Services: Inpatient Care
+512,Net Percentage of Domestic Banks Tightening Standards for Credit Card Loans
+513,Consumer Price Index for All Urban Consumers: Airline Fares in U.S. City Average
+514,Interest Rates: Long-Term Government Bond Yields: 10-Year: Main (Including Benchmark) for Japan
+515,Producer Price Index by Commodity: Credit Intermediation Services (Partial): Business Loans (Partial)
+516,"Charge-Off Rate on Credit Card Loans, All Commercial Banks"
+517,Domestic Auto Production
+518,US Diesel Sales Price
+519,"Producer Price Index by Industry: Offices of Physicians, Except Mental Health"
+520,Producer Price Index by Commodity: Intermediate Demand by Production Flow: Stage 3 Intermediate Demand
+521,Producer Price Index by Commodity: Final Demand: Final Demand Trade Services
+522,Government total expenditures
+523,Producer Price Index by Commodity: Intermediate Demand by Production Flow: Stage 4 Intermediate Demand
+524,Producer Price Index by Commodity: Intermediate Demand by Production Flow: Stage 2 Intermediate Demand
+525,Real Personal Income
+526,Producer Price Index by Commodity: Professional Services (Partial): Legal Services
+527,Producer Price Index by Commodity: Professional Services (Partial): Legal Services
+528,"Producer Price Index by Commodity: Final Demand: Final Demand Services Less Trade, Transportation, and Warehousing"
+529,Producer Price Index by Commodity: Intermediate Demand by Production Flow: Stage 1 Intermediate Demand
+530,Average Price: All Soft Drinks (Cost per 2 Liters/67.6 Ounces) in U.S. City Average
+531,S&P/Case-Shiller TX-Dallas Home Price Index
+532,"Producer Price Index by Industry: Capacitor, Resistor, Coil, Transformer, and Other Inductor Manufacturing"
+533,"All Sectors; Debt Securities and Loans; Liability, Level"
+534,Consumer Price Index for All Urban Consumers: All Items Less Shelter in U.S. City Average
+535,"Average Hourly Earnings of All Employees, Manufacturing"
+536,"Producer Price Index by Commodity: Rubber and Plastic Products: Synthetic Rubber, Including Styrene-Butadiene Rubber (SBR) and Ethylene Propylene"
+537,Crude Birth Rate for the United States
+538,Consumer Price Index for All Urban Wage Earners and Clerical Workers: All Items in U.S. City Average
+539,"Global price of Coal, Australia"
+540,ICE BofA 7-10 Year US Corporate Index Effective Yield
+541,Consumer Price Index for All Urban Consumers: Owners' Equivalent Rent of Residences in U.S. City Average
+542,Interest Rates: Long-Term Government Bond Yields: 10-Year: Main (Including Benchmark) for Germany
+543,Shares of gross domestic product: Personal consumption expenditures
+544,Household saving
+545,State Minimum Wage Rate for Michigan
+546,Gross Federal Debt
+547,30-Year Expected Inflation
+548,Moving 12-Month Total Vehicle Miles Traveled
+549,Labor Force Participation Rate - Men
+550,"Treasury and Agency Securities: Mortgage-Backed Securities (MBS), All Commercial Banks"
+551,All-Transactions House Price Index for New Jersey
+552,M1 (DISCONTINUED)
+553,St. Louis Adjusted Monetary Base (DISCONTINUED)
+554,Real Broad Dollar Index
+555,Mexican Pesos to U.S. Dollar Spot Exchange Rate
+556,Federal government budget surplus or deficit (-)
+557,"Average Hourly Earnings of All Employees, Construction"
+558,Consumer Price Index: All Items: Total for India
+559,Net Worth Held by the Top 0.1% (99.9th to 100th Wealth Percentiles)
+560,Total Construction Spending: Residential in the United States
+561,Gross Domestic Product for United Kingdom
+562,Real personal income excluding current transfer receipts
+563,Real Gross Domestic Product for Canada
+564,Global price of Palm Oil
+565,CBOE S&P 500 3-Month Volatility Index
+566,Assets: Liquidity and Credit Facilities: Loans: Primary Credit: Wednesday Level
+567,New Privately-Owned Housing Units Started: Units in Buildings with 5 Units or More
+568,Manufacturers' New Orders: Consumer Goods
+569,Global price of Iron Ore
+570,Global price of Iron Ore
+571,CBOE Gold ETF Volatility Index
+572,Median Family Income in the United States
+573,Nominal Advanced Foreign Economies U.S. Dollar Index
+574,Truck Tonnage Index
+575,Total Net Worth Held by the Bottom 50% (1st to 50th Wealth Percentiles)
+576,"All-Transactions House Price Index for Phoenix-Mesa-Chandler, AZ (MSA)"
+577,"Finance Rate on Consumer Installment Loans at Commercial Banks, New Autos 60 Month Loan"
+578,S&P/Case-Shiller CO-Denver Home Price Index
+579,Real Broad Effective Exchange Rate for United States
+580,S&P/Case-Shiller FL-Miami Home Price Index
+581,Assets: Securities Held Outright: Securities Held Outright: Wednesday Level
+582,"Sticky Price Consumer Price Index less Food, Energy, and Shelter"
+583,Interest Rates: Long-Term Government Bond Yields: 10-Year: Main (Including Benchmark) for United Kingdom
+584,"Housing Inventory: Active Listing Count in Phoenix-Mesa-Scottsdale, AZ (CBSA)"
+585,Gross domestic product per capita
+586,Housing Inventory: Median Listing Price per Square Feet in the United States
+587,National income: Corporate profits before tax (without IVA and CCAdj)
+588,Real Gross Domestic Product for Italy
+589,Consumer Price Index for All Urban Consumers: Housing in U.S. City Average
+590,Personal saving as a percentage of disposable personal income
+591,"Consumer Loans: Other Consumer Loans: Automobile Loans, All Commercial Banks"
+592,Real Residential Property Prices for Hong Kong SAR
+593,"Average Price: Flour, White, All Purpose (Cost per Pound/453.6 Grams) in U.S. City Average"
+594,Producer Price Index by Industry: Gold Ore and Silver Ore Mining: Gold Ores
+595,Assets: Liquidity and Credit Facilities: Loans: Wednesday Level
+596,Mortgage Delinquency Rates for United States
+597,Federal Debt Held by the Public
+598,Harmonized Index of Consumer Prices: All Items for Euro area (19 countries)
+599,"Market Yield on U.S. Treasury Securities at 20-Year Constant Maturity, Quoted on an Investment Basis, Inflation-Indexed"
+600,180-Day Average SOFR
+601,St. Louis Fed Financial Stress Index (DISCONTINUED)
+602,All-Transactions House Price Index for Massachusetts
+603,Median Household Income in California
+604,S&P/Case-Shiller AZ-Phoenix Home Price Index
+605,Net Percentage of Domestic Banks Tightening Standards for Commercial and Industrial Loans to Small Firms
+606,Producer Price Index by Industry: Corrugated and Solid Fiber Box Manufacturing: Corrugated Shipping Containers for Paper and Allied Products
+607,Manufacturers' New Orders: Computers and Electronic Products
+608,"Cash Assets, All Commercial Banks"
+609,ICE BofA US Corporate Index Total Return Index Value
+610,S&P/Case-Shiller MA-Boston Home Price Index
+611,Net Exports of Goods and Services
+612,Imports of Goods and Services
+613,Number of Listed Companies for United States
+614,Unemployment Rate for United States
+615,Share of Labour Compensation in GDP at Current National Prices for United States
+616,"Delinquency Rate on Credit Card Loans, Banks Ranked 1st to 100th Largest in Size by Assets"
+617,Producer Price Index by Industry: Glass and Glass Product Manufacturing
+618,U.S Individual Income Tax: Tax Rates for Regular Tax: Highest Bracket
+619,Average Price: Potato Chips (Cost per 16 Ounces) in U.S. City Average
+620,Personal interest payments
+621,Personal interest payments
+622,Excess Reserves of Depository Institutions (DISCONTINUED)
+623,Monetary Base; Reserve Balances
+624,Global price of Agr. Raw Material Index
+625,Personal Consumption Expenditures: Services
+626,"Average Price: All Soft Drinks, 12 Pk, 12 Ounce, Cans (Cost per 12 Ounces/354.9 Milliliters) in the Midwest Census Region - Urban"
+627,Manufacturers' New Orders: Durable Goods Excluding Transportation
+628,"Households and Nonprofit Organizations; Directly and Indirectly Held Corporate Equities as a Percentage of Financial Assets; Assets, Level"
+629,"Average Hourly Earnings of All Employees, Leisure and Hospitality"
+630,Existing Single-Family Home Sales
+631,Chicago Fed National Financial Conditions Leverage Subindex
+632,Manufacturers' New Orders: Consumer Durable Goods
+633,Household Financial Obligations as a Percent of Disposable Personal Income
+634,Global price of Sunflower Oil
+635,Balance on current account
+636,Global Economic Policy Uncertainty Index: Current Price Adjusted GDP
+637,"Interest Rates and Price Indexes; 10-Year Treasury Yield, Level"
+638,State Minimum Wage Rate for Virginia
+639,Consumer Price Index: All Items: Total for Germany
+640,"Delinquency Rate on Loans Secured by Real Estate, All Commercial Banks"
+641,Chicago Fed National Financial Conditions Credit Subindex
+642,State Minimum Wage Rate for Pennsylvania
+643,"Average Price: Butter, Stick (Cost per Pound/453.6 Grams) in U.S. City Average"
+644,"Fertility Rate, Total for the United States"
+645,"Households and Nonprofit Organizations; Net Worth, Level"
+646,Interest Rates: 3-Month or 90-Day Rates and Yields: Interbank Rates: Total for United States
+647,M2 for China
+648,Consumer Price Index for All Urban Consumers: Medical Care in U.S. City Average
+649,Global price of WTI Crude
+650,"Government-Sponsored Enterprises; FHLB Advances; Asset, Level"
+651,Unemployment Rate - 20 Yrs. & over
+652,Real Average of GDP and GDI
+653,Treasury Yield: Money Market
+654,Kerosene-Type Jet Fuel Prices: U.S. Gulf Coast
+655,Global price of Nickel
+656,"Average Price: Chuck Roast, USDA Choice, Boneless (Cost per Pound/453.6 Grams) in the South Census Region - Urban"
+657,Global price of Barley
+658,Consumer Price Index: All Items: Total for Japan
+659,Consumer Price Index: All Items: Total for Japan
+660,Other Liquid Deposits: Total
+661,Multiple Jobholders as a Percent of Employed
+662,Chicago Fed National Activity Index
+663,Manufacturers' New Orders: Durable Goods Excluding Defense
+664,Indian Rupees to U.S. Dollar Spot Exchange Rate
+665,All-Transactions House Price Index for Texas
+666,State Minimum Wage Rate for Arizona
+667,Producer Price Index by Commodity: Metals and Metal Products: Titanium and Titanium-Base Alloy Mill Shapes
+668,New Privately-Owned Housing Units Under Construction: Units in Buildings with 5 Units or More
+669,"Population, Total for United States"
+670,"Real Estate Loans: Residential Real Estate Loans: Revolving Home Equity Loans, All Commercial Banks"
+671,Hires: Total Nonfarm
+672,Population Level
+673,Global price of Rubber
+674,"All-Transactions House Price Index for Seattle-Bellevue-Kent, WA (MSAD)"
+675,Manufacturers' New Orders: Machinery
+676,Euro Short-Term Rate: Volume-Weighted Trimmed Mean Rate
+677,Interest Rate on Excess Reserves (DISCONTINUED)
+678,Overnight Unsecured AMERIBOR Benchmark Interest Rate
+679,E-Commerce Retail Sales
+680,"All Employees, Federal"
+681,Kansas City Financial Stress Index
+682,ICE BofA High Yield Emerging Markets Corporate Plus Index Option-Adjusted Spread
+683,Chicago Fed National Financial Conditions Risk Subindex
+684,Natural Rate of Unemployment (Short-Term) (DISCONTINUED)
+685,"All-Transactions House Price Index for Las Vegas-Henderson-Paradise, NV (MSA)"
+686,Median Sales Price of Existing Single-Family Homes
+687,"Longer Run FOMC Summary of Economic Projections for the Fed Funds Rate, Median"
+688,Business Applications: Retail Trade in the United States
+689,Household Estimates
+690,Manufacturers' New Orders: Furniture and Related Products
+691,Total Households
+692,State Minimum Wage Rate for Maryland
+693,"Average Hourly Earnings of All Employees, Professional and Business Services"
+694,"Average Hourly Earnings of All Employees, Transportation and Warehousing"
+695,"Manufacturers' New Orders: Electrical Equipment, Appliances and Components"
+696,Wilshire 5000 Total Market Full Cap Index (DISCONTINUED)
+697,Labor Force Participation Rate - 55 Yrs. & over
+698,Freight Transportation Services Index
+699,Real Median Family Income in the United States
+700,Employment Cost Index: Total compensation: All Civilian
+701,Exchange Rate to U.S. Dollar for Pakistan
+702,10-Year High Quality Market (HQM) Corporate Bond Par Yield
+703,"Housing Inventory: Active Listing Count in Austin-Round Rock, TX (CBSA)"
+704,Gross Domestic Product: All Industry Total in California
+705,"Average Price: Bacon, Sliced (Cost per Pound/453.6 Grams) in U.S. City Average"
+706,Producer Price Index by Commodity: Final Demand: Finished Goods
+707,"All-Transactions House Price Index for Houston-The Woodlands-Sugar Land, TX (MSA)"
+708,"Unemployment Rate - 20 Yrs. & over, Black or African American Men"
+709,"Interest Rates, Discount Rate for Japan"
+710,Demand Deposits
+711,Manufacturers' New Orders: Iron and Steel Mills and Ferroalloy and Steel Product Manufacturing
+712,"All Sectors; Total Capital Expenditures, Transactions"
+713,Manufacturers' New Orders: Capital Goods
+714,Real Gross Domestic Product for France

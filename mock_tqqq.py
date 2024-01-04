@@ -12,8 +12,8 @@ tqqq_mock = pd.read_csv("tqqq_mock.csv")
 
 prices = pd.merge(prices, tqqq_mock, on=["Date"], how="left")
 prices['Date'] = pd.to_datetime(prices['Date'])
-# prices = prices[prices['Date'] >= '2010-02-12']
-# prices = prices[prices['Date'] <= '2007-07-24']
+prices = prices[prices['Date'] >= '2003-03-24']
+# prices = prices[prices['Date'] <= '2020-07-24']
 prices = prices.set_index("Date")
 print(prices.dtypes)
 
