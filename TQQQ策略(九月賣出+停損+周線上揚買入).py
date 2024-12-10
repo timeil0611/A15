@@ -48,11 +48,6 @@ start_date = "1983-08-10"
 end_date = "1990-08-10"
 final_date = "2023-10-20"
 
-# 将 end_date 转换为 datetime 对象
-end_date_dt = datetime.strptime(end_date, "%Y-%m-%d")
-
-# 提取年份并转为数字
-year = end_date_dt.year
 
 while pd.to_datetime(end_date) <= pd.to_datetime(final_date):
     # 篩選時間範圍
