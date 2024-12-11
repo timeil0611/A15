@@ -39,15 +39,15 @@ i=1
 k=1
 
 # 為了畫圖
-years = list(range(1990, 2024)) # range中。第一個要與end_date年份相同，第二個要與final_date年份+1相同
+years = list(range(1993, 2024)) # range中。第一個要與end_date年份相同，第二個要與final_date年份+1相同
 str_result = []
 b_h_result= []
 
 # 不同windows
 start_date = "1983-08-10"
-end_date = "1990-08-10"
+end_date = "1993-08-10"
 final_date = "2023-10-20"
-
+rolling_years= int(end_date.split("-")[0])-int(start_date.split("-")[0])
 
 while pd.to_datetime(end_date) <= pd.to_datetime(final_date):
     # 篩選時間範圍
@@ -201,8 +201,37 @@ while pd.to_datetime(end_date) <= pd.to_datetime(final_date):
 
 
     # bt.plot(resample='1W')
-print(i)
+print("lose times",i)
 print("total ",k)
+
+# 百份位數統計表
+def quantile(str_result,b_h_result):
+    df = pd.DataFrame({"str_result": str_result,"B&H_result":b_h_result})
+    
+        # 計算百分位數、最大值、最小值、平均值
+    summary = {
+        "Return [%]": ["Min", "25th Percentile", "50th Percentile (Median)", "75th Percentile", "Max", "Mean"],
+        "B&H_result": [
+            df["B&H_result"].min(),
+            df["B&H_result"].quantile(0.25),
+            df["B&H_result"].median(),
+            df["B&H_result"].quantile(0.75),
+            df["B&H_result"].max(),
+            df["B&H_result"].mean(),
+        ],
+        "str_result": [
+            df["str_result"].min(),
+            df["str_result"].quantile(0.25),
+            df["str_result"].median(),
+            df["str_result"].quantile(0.75),
+            df["str_result"].max(),
+            df["str_result"].mean(),
+        ],
+    }
+
+    summary_df = pd.DataFrame(summary)
+
+    print(summary_df)
 
 def plot(years,str_result,b_h_result):
     # 創建DataFrame
@@ -211,8 +240,16 @@ def plot(years,str_result,b_h_result):
     # 繪製折線
     fig = px.line(df, x="Year", y=["str_result", "B&H_result"], 
               labels={"value": "return [%]", "variable": "strategy"},
-              title="滾動七年最終報酬")
+              title=f"滾動 {rolling_years} 年最終報酬",# 使用 f-string
+              )
+    
+    # 啟用十字軸游標
+    fig.update_layout(hovermode="x",  # 十字軸的模式
+        xaxis=dict(showspikes=True, spikemode="across", spikesnap="cursor", spikethickness=1),
+        yaxis=dict(showspikes=True, spikethickness=1),
+        )
 
     fig.show()
     
+quantile(str_result,b_h_result)    
 plot(years,str_result,b_h_result)
