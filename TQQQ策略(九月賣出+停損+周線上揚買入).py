@@ -37,15 +37,15 @@ k = 1
 
 # 為了畫圖
 years = list(
-    range(1993, 2024)
-)  # range中。第一個要與end_date年份相同，第二個要與final_date年份+1相同
+    range(1993, 2023)
+)  # range中。第一個要與end_date年份相同，第二個要與(final_date年份+1)相同
 str_result = []
 b_h_result = []
 
-# 不同windows
+# 不同windows(修改年份時要同時修改上面years = list(range(,))中的數字)
 start_date = "1983-08-10"
 end_date = "1993-08-10"
-final_date = "2023-10-20"
+final_date = "2022-12-30"
 rolling_years = int(end_date.split("-")[0]) - int(start_date.split("-")[0])
 
 while pd.to_datetime(end_date) <= pd.to_datetime(final_date):
@@ -122,20 +122,22 @@ while pd.to_datetime(end_date) <= pd.to_datetime(final_date):
             self.high_prices = self.data["High"]
             # 獲取過去 80 天的最高價
             highest_high = self.high_prices[-80:].max()
-
+            # 賣的策略  
             if (
-                (self.data.index[-1].month == 9)
-                or (
-                    (self.data.index[-1].month == 8) and (self.data.index[-1].day == 31)
-                )
-                or (qqq_current_price <= 0.88 * qqq_highest_high)
-            ) and (self.position.is_long):
+                (
+                (self.data.index[-1].month == 9) # 9月賣
+                or 
+                ((self.data.index[-1].month == 8) and (self.data.index[-1].day == 31)) # 8/31賣
+                or 
+                (qqq_current_price <= 0.88 * qqq_highest_high)
+                ) 
+                and (self.position.is_long)):
                 self.position.close()
 
-            # 如果 60ma的近20個值不再下跌，買
+            # 買的策略
             if (
                 not (
-                    (self.data.index[-1].month == 9)
+                (self.data.index[-1].month == 9)
                     or (
                         (self.data.index[-1].month == 8)
                         and (self.data.index[-1].day == 31)
@@ -153,7 +155,7 @@ while pd.to_datetime(end_date) <= pd.to_datetime(final_date):
         "%Y-%m-%d"
     )
     end_date = (pd.to_datetime(end_date) + pd.DateOffset(years=1)).strftime("%Y-%m-%d")
-    print(window_df.index[0], "-", window_df.index[-1])
+    # print(window_df.index[0], "-", window_df.index[-1])
 
     bt = Backtest(
         window_df, TQQQStra, cash=10000, commission=0.0002, exclusive_orders=True
@@ -161,33 +163,33 @@ while pd.to_datetime(end_date) <= pd.to_datetime(final_date):
     stats = bt.run()
 
     # print(stats)
-    print("Buy & Hold Return [%]   ", round(stats["Buy & Hold Return [%]"], 2))
-    print("Return [%]              ", round(stats["Return [%]"], 2))
-    print("Return (Ann.) [%]       ", round(stats["Return (Ann.) [%]"], 2))
-    print("Avg. Drawdown [%]       ", round(stats["Avg. Drawdown [%]"], 2))
-    print("Max. Drawdown [%]       ", round(stats["Max. Drawdown [%]"], 2))
+    # print("Buy & Hold Return [%]   ", round(stats["Buy & Hold Return [%]"], 2))
+    # print("Return [%]              ", round(stats["Return [%]"], 2))
+    # print("Return (Ann.) [%]       ", round(stats["Return (Ann.) [%]"], 2))
     # print("Avg. Drawdown [%]       ", round(stats["Avg. Drawdown [%]"], 2))
-    print("Sortino Ratio           ", round(stats["Sortino Ratio"], 2))
-    print("Win Rate [%]            ", round(stats["Win Rate [%]"], 2))
-    # 策略贏B&H次數計算
-    if (round(stats["Buy & Hold Return [%]"], 2) - round(stats["Return [%]"], 2)) > 0:
-        print(
-            "Lose ",
-            round(stats["Buy & Hold Return [%]"], 2) - round(stats["Return [%]"], 2),
-            "%",
-        )
-        i += 1
-    k += 1
+    # print("Max. Drawdown [%]       ", round(stats["Max. Drawdown [%]"], 2))
+    # # print("Avg. Drawdown [%]       ", round(stats["Avg. Drawdown [%]"], 2))
+    # print("Sortino Ratio           ", round(stats["Sortino Ratio"], 2))
+    # print("Win Rate [%]            ", round(stats["Win Rate [%]"], 2))
+    # # 策略贏B&H次數計算
+    # if (round(stats["Buy & Hold Return [%]"], 2) - round(stats["Return [%]"], 2)) > 0:
+    #     print(
+    #         "Lose ",
+    #         round(stats["Buy & Hold Return [%]"], 2) - round(stats["Return [%]"], 2),
+    #         "%",
+    #     )
+    #     i += 1
+    # k += 1
 
     # 畫return跟B_H的圖
     str_result.append(round(stats["Return [%]"], 2))
     b_h_result.append(round(stats["Buy & Hold Return [%]"], 2))
 
-    print("\n")
+    # print("\n")
 
     # bt.plot(resample='1W')
-print("lose times", i)
-print("total ", k)
+# print("lose times", i)
+# print("total ", k)
 
 
 # 百份位數統計表

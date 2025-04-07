@@ -22,7 +22,7 @@ def SMA(values, n):
 start = "1980-01-01"
 
 # 取得資料
-df = yf.download("^GSPC", start="1984-02-17", end="2023-10-21", interval="1d")
+df = yf.download("^GSPC", start="1984-02-17", end="2023-10-20", interval="1d")
 qqq = pd.read_csv("qqq.csv")
 tqqq_mock = pd.read_csv("TQQQ_Mock_kline.csv")
 df=tqqq_mock
@@ -85,13 +85,14 @@ class MAStra(Strategy):
     cooldown_days = 4
 
     def init(self):
+        # 顯示線圖
         self.sma1 = self.I(SMA, self.data.Close, self.n1)
         self.Vsma1 = self.I(SMA, self.data.Volume, self.n1)
         self.ema1 = self.I(EMA30, self.data)
         self.qqq = self.I(QQQ, qqq["qqq"])
         print(self.data)
         self.cooldown_weeks = 6
-        self.last_trade_date = pd.to_datetime("1950-01-01")  # 設定初值
+        self.last_trade_date = pd.to_datetime("1981-07-31")  # 設定初值
 
     def next(self):
         # self.buy()
