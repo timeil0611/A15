@@ -134,7 +134,7 @@ class TQQQStra(Strategy):
             and (self.position.is_long)):
             self.position.close()
 
-        # 如果 60ma的近20個值不再下跌，買
+        # 買的策略
         if (
             not(
             (self.data.index[-1].month==9)
