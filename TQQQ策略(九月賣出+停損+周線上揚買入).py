@@ -95,7 +95,7 @@ while pd.to_datetime(end_date) <= pd.to_datetime(final_date):
     # MA 策略
     class TQQQStra(Strategy):
         n1 = 10
-        cooldown_days = 4
+        # cooldown_days = 4
 
         def init(self):
             self.qqq_sma1 = self.I(SMA, self.data.qqq, self.n1)

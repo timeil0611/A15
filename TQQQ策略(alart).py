@@ -14,7 +14,7 @@ from email.mime.multipart import MIMEMultipart
 
     
 # 下載歷史數據
-df = yf.download('QQQ',start='2013-08-20')
+df = yf.download('QQQ',start='2023-08-20')
 
 # 移除 Ticker 層級
 qqq = df.copy()
@@ -72,10 +72,10 @@ class TQQQ(Strategy):
             and (self.position.is_long)):
             print(f"SELL ALERT: {self.data.index[-1]} - Closing position due to sell condition.")
             # 發送賣出提醒郵件
-            self.send_email(
-                subject="SELL ALERT: TQQQ",
-                body=f"SELL ALERT at {self.data.index[-1]}: QQQ price = {qqq_current_price:.2f}, closed position due to sell condition."
-            )
+            # self.send_email(
+            #     subject="SELL ALERT: TQQQ",
+            #     body=f"SELL ALERT at {self.data.index[-1]}: QQQ price = {qqq_current_price:.2f}, closed position due to sell condition."
+            # )
             self.position.close()
             
         # 買的策略
@@ -98,10 +98,10 @@ class TQQQ(Strategy):
         ):
             print(f"BUY ALERT: {self.data.index[-1]} - Initiating buy due to buy condition.")
             # 發送買入提醒郵件
-            self.send_email(
-                subject="BUY ALERT: TQQQ",
-                body=f"BUY ALERT at {self.data.index[-1]}: QQQ price = {qqq_current_price:.2f}, initiated buy due to buy condition."
-            )
+            # self.send_email(
+            #     subject="BUY ALERT: TQQQ",
+            #     body=f"BUY ALERT at {self.data.index[-1]}: QQQ price = {qqq_current_price:.2f}, initiated buy due to buy condition."
+            # )
             self.buy()
 
 
