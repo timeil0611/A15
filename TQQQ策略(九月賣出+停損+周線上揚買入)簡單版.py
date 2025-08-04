@@ -2,12 +2,9 @@ from backtesting import Backtest, Strategy
 from backtesting.lib import crossover
 from backtesting.lib import resample_apply
 
-from FinMind.data import DataLoader
 import pandas as pd
 
 import talib
-from talib import abstract
-import matplotlib.pyplot as plt
 
 import yfinance as yf
 
@@ -18,9 +15,9 @@ import yfinance as yf
 
 start = "1980-01-01"
 
-# 取得資料
-qqq = pd.read_csv("qqq_19830810.csv")
-tqqq_mock = pd.read_csv("TQQQ_Mock_kline _19830810.csv")
+# 取得資料(日期必須一致)
+qqq = pd.read_csv("qqq.csv")
+tqqq_mock = pd.read_csv("TQQQ_Mock_kline.csv")
 df=tqqq_mock
 
 # 設定Index
@@ -33,14 +30,10 @@ qqq.set_index(pd.DatetimeIndex(qqq.index), inplace=True)
 qqq = qqq[start:]
 df = pd.concat([df, qqq], axis=1)
 
-i=1
-k=1
-# 不同windows
-start_date = "2013-08-10"
-end_date = "2023-10-20"
-final_date = "2023-10-20"
 
 # 篩選時間範圍
+start_date = "1985-08-10"
+end_date = "2025-7-30"
 window_df = df[(df.index >= start_date) & (df.index <= end_date)]
 
 # backtesting.py
@@ -110,7 +103,7 @@ class TQQQStra(Strategy):
         qqq_current_price = self.data["qqq"][-1]
         # 定義一個用於存儲最高價的 Series
         self.qqq_high_prices = self.data["qqq"]
-        print(self.qqq_high_prices)
+        # print(self.qqq_high_prices)
         # 獲取過去 80 天的最高價
         qqq_highest_high = self.qqq_high_prices[-80:].max()
         
@@ -166,7 +159,7 @@ print(window_df.index[0],"-",window_df.index[-1])
 
 
 
-bt = Backtest(window_df, TQQQStra, cash=10000, commission=0.0002,exclusive_orders=True)  # 交易成本 0.0%
+bt = Backtest(window_df, TQQQStra, cash=10000000, commission=0.0002,exclusive_orders=True)  # 交易成本 0.0%
 stats = bt.run()
 
 # print(stats)
@@ -180,8 +173,7 @@ print("Sortino Ratio           ", round(stats["Sortino Ratio"], 2))
 print("Win Rate [%]            ", round(stats["Win Rate [%]"], 2))
 if(round(stats["Buy & Hold Return [%]"], 2)-round(stats["Return [%]"], 2))>0:
     print("Lose ",round(stats["Buy & Hold Return [%]"], 2)-round(stats["Return [%]"], 2), "%")
-    i+=1
-k+=1
+
 print("\n")
 
 

@@ -2,24 +2,21 @@ from backtesting import Backtest, Strategy
 from backtesting.lib import crossover
 from backtesting.lib import resample_apply
 
-from FinMind.data import DataLoader
+
 import pandas as pd
 
 import talib
-from talib import abstract
-import matplotlib.pyplot as plt
+
 import plotly.express as px
 
-import yfinance as yf
 
-from datetime import datetime
 
 
 start = "1980-01-01"
 
 # 取得資料
-qqq = pd.read_csv("qqq_19830810.csv")
-tqqq_mock = pd.read_csv("TQQQ_Mock_kline _19830810.csv")
+qqq = pd.read_csv("qqq.csv")
+tqqq_mock = pd.read_csv("TQQQ_Mock_kline.csv")
 df = tqqq_mock
 
 # 設定Index
@@ -37,15 +34,15 @@ k = 1
 
 # 為了畫圖
 years = list(
-    range(1993, 2023)
+    range(1990, 2026)
 )  # range中。第一個要與end_date年份相同，第二個要與(final_date年份+1)相同
 str_result = []
 b_h_result = []
 
 # 不同windows(修改年份時要同時修改上面years = list(range(,))中的數字)
-start_date = "1983-08-10"
-end_date = "1993-08-10"
-final_date = "2022-12-30"
+start_date = "1985-10-02"
+end_date = "1990-08-10"
+final_date = "2025-12-30"
 rolling_years = int(end_date.split("-")[0]) - int(start_date.split("-")[0])
 
 while pd.to_datetime(end_date) <= pd.to_datetime(final_date):
@@ -102,7 +99,7 @@ while pd.to_datetime(end_date) <= pd.to_datetime(final_date):
             self.sma1 = self.I(SMA, self.data.Close, self.n1)
             # self.Vsma1 = self.I(SMA, self.data.Volume, self.n1)
             # self.ema1 = self.I(EMA30, self.data)
-            self.qqq = self.I(QQQ, window_df["qqq"])
+            # self.qqq = self.I(QQQ, window_df["qqq"])
             self.cooldown_weeks = 6
             self.last_trade_date = pd.to_datetime("1981-07-31")  # 設定初值
             # 周範圍
@@ -158,7 +155,7 @@ while pd.to_datetime(end_date) <= pd.to_datetime(final_date):
     # print(window_df.index[0], "-", window_df.index[-1])
 
     bt = Backtest(
-        window_df, TQQQStra, cash=10000, commission=0.0002, exclusive_orders=True
+        window_df, TQQQStra, cash=100000000, commission=0.0002, exclusive_orders=True
     )  # 交易成本 0.0%
     stats = bt.run()
 
