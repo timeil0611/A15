@@ -2,12 +2,11 @@ from backtesting import Backtest, Strategy
 from backtesting.lib import crossover
 from backtesting.lib import resample_apply
 
-from FinMind.data import DataLoader
 import pandas as pd
 
 import talib
 from talib import abstract
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 import yfinance as yf
 

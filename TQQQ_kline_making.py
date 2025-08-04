@@ -1,9 +1,6 @@
 
-from FinMind.data import DataLoader
 import pandas as pd
 
-import talib
-from talib import abstract
 import matplotlib.pyplot as plt
 
 import yfinance as yf
@@ -22,8 +19,8 @@ start = "1980-01-01"
 # 取得資料
 qqq = pd.read_csv("qqq.csv")
 tqqq_mock = pd.read_csv("tqqq_mock.csv")
-qqq_volume = yf.download("qqq", start="1980-02-17", end="2023-10-21", interval="1d")
-tqqq = yf.download("tqqq", start="1980-02-17", end="2023-10-21", interval="1d")
+qqq_volume = yf.download("qqq", start="1980-02-17", end="2025-08-01", interval="1d")
+tqqq = yf.download("tqqq", start="1980-02-17", end="2025-08-01", interval="1d")
 
 
 # 製作tqqq的candle
