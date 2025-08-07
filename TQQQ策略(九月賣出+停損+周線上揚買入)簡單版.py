@@ -32,7 +32,7 @@ df = pd.concat([df, qqq], axis=1)
 
 
 # 篩選時間範圍
-start_date = "1985-08-10"
+start_date = "2000-08-10"
 end_date = "2025-7-30"
 window_df = df[(df.index >= start_date) & (df.index <= end_date)]
 
@@ -116,7 +116,7 @@ class TQQQStra(Strategy):
 
 
 
-
+        # 賣的策略
         if (
             (
             (self.data.index[-1].month==9)
@@ -172,7 +172,7 @@ print("Max. Drawdown [%]       ", round(stats["Max. Drawdown [%]"], 2))
 print("Sortino Ratio           ", round(stats["Sortino Ratio"], 2))
 print("Win Rate [%]            ", round(stats["Win Rate [%]"], 2))
 if(round(stats["Buy & Hold Return [%]"], 2)-round(stats["Return [%]"], 2))>0:
-    print("Lose ",round(stats["Buy & Hold Return [%]"], 2)-round(stats["Return [%]"], 2), "%")
+    print("Lose Buy & Hold Return",round(stats["Buy & Hold Return [%]"], 2)-round(stats["Return [%]"], 2), "%")
 
 print("\n")
 

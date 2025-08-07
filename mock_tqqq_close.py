@@ -30,8 +30,7 @@ else:
     print("偵測到單層級欄位，直接使用。")
     df_base = df_multi
 
-# 現在，無論 yfinance 回傳什麼，df_base 都保證是單層級欄位的 DataFrame
-print(df_base.head()) # 你可以取消這行的註解來確認結構
+print(df_base.head()) # 可以取消這行的註解來確認結構
 
 df_base['base_return'] = df_base['Close'].pct_change()
 df_base.dropna(subset=['base_return'], inplace=True) # 移除第一個NaN

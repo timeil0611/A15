@@ -34,14 +34,14 @@ k = 1
 
 # 為了畫圖
 years = list(
-    range(1990, 2026)
+    range(2009, 2026)
 )  # range中。第一個要與end_date年份相同，第二個要與(final_date年份+1)相同
 str_result = []
 b_h_result = []
 
 # 不同windows(修改年份時要同時修改上面years = list(range(,))中的數字)
-start_date = "1985-10-02"
-end_date = "1990-08-10"
+start_date = "2008-10-02"
+end_date = "2009-10-02"
 final_date = "2025-12-30"
 rolling_years = int(end_date.split("-")[0]) - int(start_date.split("-")[0])
 

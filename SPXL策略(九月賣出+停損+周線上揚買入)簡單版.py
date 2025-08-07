@@ -32,8 +32,8 @@ df = pd.concat([df, spx], axis=1)
 
 
 # 篩選時間範圍
-start_date = "1985-08-10"
-end_date = "2025-7-30"
+start_date = "1950-08-10"
+end_date = "2009-7-30"
 window_df = df[(df.index >= start_date) & (df.index <= end_date)]
 
 # backtesting.py
