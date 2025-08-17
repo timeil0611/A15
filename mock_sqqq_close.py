@@ -1,4 +1,4 @@
-﻿import yfinance as yf
+import yfinance as yf
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 # --- 參數設定 (來自程式碼2的嚴謹設定) ---
 TICKER_UNDERLYING = '^NDX'
 TICKER_LEVERAGED = 'TQQQ'
-LEVERAGE_FACTOR = 3.0
+LEVERAGE_FACTOR = -3.0
 EXPENSE_RATIO = 0.0086
 TRACKING_ERROR_STD = 0.001 # 引入追蹤誤差
 SIMULATION_START_DATE = '1985-01-01'
@@ -92,4 +92,4 @@ plt.xlabel('Date')
 plt.grid(True, which="both")
 plt.show()
 
-df_final.to_csv('tqqq_backfilled_data.csv', index=True) #匯出CSV
+df_final.to_csv('sqqq_backfilled_data.csv', index=True) #匯出CSV

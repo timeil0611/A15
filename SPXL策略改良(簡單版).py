@@ -119,11 +119,7 @@ class SPXL_Stra(Strategy):
 
         if (
             (
-            (self.data.index[-1].month==9)
-            or
-            ((self.data.index[-1].month==8)and(self.data.index[-1].day==31))
-            or
-            (spx_current_price <= 0.88 * spx_highest_high)
+            (spx_current_price <= self.spx_sma1[-1])
             )
             and (self.position.is_long)):
             # print(f"SELL ALERT: {self.data.index[-1]} - Closing position due to sell condition.")
@@ -131,7 +127,7 @@ class SPXL_Stra(Strategy):
 
         # 買的策略
         if (
-            not(
+              not(
             (self.data.index[-1].month==9)
                 or(
                     (self.data.index[-1].month==8)
@@ -159,7 +155,7 @@ print(window_df.index[0],"-",window_df.index[-1])
 
 
 
-bt = Backtest(window_df, SPXL_Stra, cash=10000000, commission=0.0002,exclusive_orders=True)  # 交易成本 0.0%
+bt = Backtest(window_df, SPXL_Stra, cash=1, commission=0.0002,exclusive_orders=True)  # 交易成本 0.0%
 stats = bt.run()
 
 print(stats)

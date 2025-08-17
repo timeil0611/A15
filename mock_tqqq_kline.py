@@ -93,8 +93,8 @@ if not df_real_tqqq_full.empty:
 else:
     df_final = df_sim_tqqq.copy()
     print("無法下載真實TQQQ數據，僅使用模擬數據。")
-    
-df_final.to_csv('TQQQ_Mock_kline.csv', index=True) #匯出CSV
+
+# df_final.to_csv('TQQQ_Mock_kline.csv', index=True) #匯出CSV
 
 # --- 步驟 7: 繪製 K 線圖 ---
 print("\n正在繪製拼接後的 K 線圖...")
