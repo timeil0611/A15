@@ -11,7 +11,7 @@ import talib
 
 import yfinance as yf
 
-def prepare_data(start_date="1980-02-12", end_date="2025-07-30"):
+def prepare_data(start_date="2020-05-12", end_date="2025-11-30"):
     """
     加載、合併並準備策略所需的所有數據。
     這個函式現在可以被其他檔案導入和使用。
@@ -45,16 +45,16 @@ def prepare_data(start_date="1980-02-12", end_date="2025-07-30"):
 class TQQQStra(Strategy):
     # --- 策略參數 ---
     n_sma_qqq = 8       # QQQ的日線SMA週期
-    n_sma_weekly = 8    # QQQ的週線SMA週期
+    n_sma_weekly = 7    # QQQ的週線SMA週期
     n_highest_high = 80 # 最高價的回看週期
-    stop_loss_pct = 0.88 # 止損百分比
+    stop_loss_pct = 88 # 止損百分比
     
     # 如果您想使用 TA-Lib 指標，也可以將它們的參數放在這裡
     talib_sma_period = 60
     talib_ema_period = 60 # 注意：您的舊函式 EMA30 用的是 60
     talib_wma_period = 30
     talib_vsma_period = 60
-    
+
     def init(self):
         # --- 使用 backtesting.py 的內建 SMA ---
         self.qqq_sma = self.I(SMA, self.data.qqq, self.n_sma_qqq)
@@ -92,7 +92,7 @@ class TQQQStra(Strategy):
             or
             ((self.data.index[-1].month==8)and(self.data.index[-1].day==31))
             or
-            (qqq_current_price <= self.stop_loss_pct * qqq_highest_high)
+            (qqq_current_price <= self.stop_loss_pct/100 * qqq_highest_high)
             )
             and (self.position.is_long)):
             # print(f"SELL ALERT: {self.data.index[-1]} - Closing position due to sell condition.")
@@ -105,7 +105,7 @@ class TQQQStra(Strategy):
                     (self.data.index[-1].month==8)
                     and(self.data.index[-1].day==31)
                 )
-                or (qqq_current_price <= self.stop_loss_pct * qqq_highest_high)
+                or (qqq_current_price <= self.stop_loss_pct/100 * qqq_highest_high)
             )
             and
             (self.w_qqq_sma[-1] - self.w_qqq_sma[-2] > 0)
@@ -123,7 +123,7 @@ if __name__ == "__main__":
     bt = Backtest(window_df, TQQQStra, cash=10000000, commission=0.0002,exclusive_orders=True)  # 交易成本 0.0%
     stats = bt.run()
 
-    # print(stats)
+    print(stats)
     print("Buy & Hold Return [%]   ", round(stats["Buy & Hold Return [%]"], 2))
     print("Return [%]              ", round(stats["Return [%]"], 2))
     print("Return (Ann.) [%]       ", round(stats["Return (Ann.) [%]"], 2))
